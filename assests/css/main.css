@@ -1,0 +1,33 @@
+.header-text {
+    font-family: ethnocentric, serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.body-text {
+    font-family: video, serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.box {
+    background-color: radial-gradient(#395B77, #263A4B);
+    border: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 15px;
+}
+
+.button-main {
+    background-color: black;
+    height: 50px;
+    width: 250px;
+    border-radius: 10px;
+    font-family: video, serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+
+}
