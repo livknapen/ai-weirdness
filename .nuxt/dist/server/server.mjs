@@ -1,1 +1,1 @@
-export { default } from "file:///C:/Users/Bram/Documents/GitHub/AI%20WEIRDNESS/s3-ai-weirdness-2/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
+export { default } from "file:///C:/Users/Pim/source/repos/s3-ai-weirdness-1/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
