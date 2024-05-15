@@ -1,18 +1,31 @@
 <template>
   <div>
     <header>
-      <h1 class="h1-head">voting guide</h1>
+      <div class="div-header-mobile">
+      <h1 class="h1-head">voting <br> guide</h1>
       <h2 class="h2-head">[ MENU ]</h2>
+      </div>
+      <div class="div-header-desktop">
+      <h1 class="h1-head">voting guide</h1>
+      <h2 class="h2-head">Home</h2>
+      <h2 class="h2-head">Quests</h2>
+      <h2 class="h2-head">Profile</h2>
+      <h2 class="h2-head" style="color: #9CF3FF;">Voting Guide</h2>
+      </div>
     </header>
-      <img class="img-stars-top" src="/static/stars-top.png">
+      <img class="img-stars-top-mobile" src="/static/stars-top.png">
+      <img class="img-stars-top-desktop" src="/static/stars-top-desktop.png">
       <div class="div-maincontainer">
         <div class="white-box">
           <h1 class="h1-votingguide">{{ pageTitle }}</h1>
           <p class="p-votingguide">With this voting guide, you’ll ultimately get a president who best suits your positions.</p>
+          <div class="div-button">
           <NuxtLink to="/voting"><button class="button-getstarted">Get started</button></NuxtLink>
+          </div>
         </div>
       </div>
-    <img class="img-stars-bottom" src="/static/stars-bottom.png">
+    <img class="img-stars-bottom-mobile" src="/static/stars-bottom.png">
+    <img class="img-stars-bottom-desktop" src="/static/stars-bottom-desktop.png">
   </div>
 </template>
 
@@ -44,16 +57,26 @@ body {
   background-color: #061929;
 }
 
+@media only screen and (max-width: 768px) 
+{
+.div-header-mobile {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  flex-direction: row;
+}
+
+.div-header-desktop {
+  display: none;
+}
+
 .h1-head {
   color: white;
   font-family: ethnocentric;
   margin-bottom: 2rem;
   font-size: 32px;
   margin-top: 4rem;
-  margin-right: 15rem;
-  margin-left: 2rem;
-  display: flex;
-  position: absolute;
 }
 
 .h2-head {
@@ -62,32 +85,52 @@ body {
   margin-bottom: 2rem;
   font-size: 32px;
   margin-top: 4rem;
-  margin-left: 17rem;
-  display: flex;
-  position: absolute;
 }
 
 .div-maincontainer {
-  margin: 2rem;
   z-index: 1;
   position: absolute;
-  margin-top: 0rem;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.img-stars-top {
+.img-stars-top-mobile {
   width: 100%;
-  margin-top: 0rem;
+  margin-top: -11rem;
+  position: absolute;
+  z-index: -1;
 }
 
-.img-stars-bottom {
+.img-stars-bottom-mobile {
   width: 100%;
-  margin-top: 33rem;
+  margin-top: 30rem;
+}
+
+.img-stars-top-desktop {
+  display: none;
+}
+
+.img-stars-bottom-desktop {
+  display: none;
+}
+
+.white-box { 
+  width: 71%;
+  height: auto;
+  background: rgb(255, 255, 255);
+  padding: 1.875rem;  
+  border-radius: 0px 58px 58px 58px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .h1-votingguide{
   color: #344F65;
   font-family: ethnocentric;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: 43px;
   margin-top: 2rem;
 }
@@ -98,6 +141,37 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 29px;
+  margin-bottom: 5rem;
+}
+
+.div-progressbar {
+  display: flex;
+}
+
+progress {
+  border-radius: 58px; 
+  width: 100%;
+  height: 22px;
+  border-color: black;
+  border-style: solid;
+  margin-top: 2rem;
+}
+
+progress::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 58px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #344F65;
+  border-radius: 58px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  margin: 20px 0;
 }
 
 .button-getstarted {
@@ -109,23 +183,288 @@ body {
   font-size: 20px;
   border: none;
   border-radius: 10px;
-  display: flex;
-  margin-left: 4rem;
   margin-top: 8rem;
   padding: 0.5rem 2rem 0.5rem 2rem;
 }
 
+.div-button {
+  display: flex;
+  justify-content: center;
+}
+
+.div-votingbuttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button-agree {
+  background-color: #17BA31;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  text-decoration: none;
+  padding: 1.2rem;
+}
+
+.button-neither {
+  background-color: #959595;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  text-decoration: none;
+  padding: 1.2rem;
+}
+
+.button-disagree {
+  background-color: #BA1717;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  text-decoration: none;
+  padding: 1.2rem;
+}
+
+.div-voting-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.p-voting-text {
+  font-family: video, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.p-voting-text2 {
+  font-family: video, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  margin-left: 0.7rem;
+}
+
+.p-voting-text3 {
+  font-family: video, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+}
+}
+
+@media only screen and (min-width: 769px) 
+{
+.div-header-desktop {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 2rem;
+  flex-direction: row;
+  position: relative;
+}
+
+.div-header-mobile {
+  display: none;
+}
+
+.h1-head {
+  color: white;
+  font-family: ethnocentric;
+  margin-bottom: 2rem;
+  font-size: 64px;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  margin-right: 11rem;
+}
+
+.h2-head {
+  color: white;
+  font-family: alata;
+  font-style: normal;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  font-size: 32px;
+  margin-top: 4rem;
+}
+
+.div-maincontainer {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  margin-top: -14rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.img-stars-top-desktop {
+  width: 100%;
+  margin-top: -10rem;
+  height: 30rem;
+}
+
+.img-stars-top-mobile {
+  display: none;
+}
+
+.img-stars-bottom-desktop {
+  width: 100%;
+  margin-top: 0rem;
+  height: 30rem;
+}
+
+.img-stars-bottom-mobile {
+  display: none;
+}
+
 .white-box { 
-  width: 18.75rem; 
-  height: 35rem; 
-  margin-left: auto; 
-  margin-right: auto;   
+  width: 71%;
+  height: auto;
   background: rgb(255, 255, 255);
-  padding: 1.875rem;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  padding: 1.875rem;  
   border-radius: 0px 58px 58px 58px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.h1-votingguide{
+  color: #344F65;
+  font-family: ethnocentric;
+  margin-bottom: 2rem;
+  font-size: 45px;
+  margin-top: 4rem;
+  margin-left: 4rem;
+}
+
+.p-votingguide {
+  color: black;
+  font-family: video, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 33px;
+  margin-left: 4rem;
+  margin-right: 7rem;
+}
+
+.div-progressbar {
+  display: flex;
+}
+
+progress {
+  border-radius: 58px;
+  width: 68%;
+  height: 22px;
+  border-color: black;
+  border-style: solid;
+  margin-top: 2rem;
+  margin-left: 10rem;
+}
+
+progress::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 58px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #344F65;
+  border-radius: 58px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  margin: 20px 0;
+}
+
+.button-getstarted {
+  color: white;
+  background-color: black;
+  font-family: video, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 8rem;
+  padding: 1rem 5rem;
+  cursor: pointer;
+}
+
+.div-button {
+  display: flex;
+  justify-content: center;
+}
+
+.div-votingbuttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 6rem;
+}
+
+.button-agree {
+  background-color: #17BA31;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  text-decoration: none;
+  padding: 1.8rem;
+  cursor: pointer;
+}
+
+.button-neither {
+  background-color: #959595;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  text-decoration: none;
+  padding: 1.8rem;
+  cursor: pointer;
+}
+
+.button-disagree {
+  background-color: #BA1717;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  text-decoration: none;
+  padding: 1.8rem;
+  cursor: pointer;
+}
+
+.div-voting-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.p-voting-text {
+  font-family: video, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.p-voting-text2 {
+  font-family: video, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  margin-left: 2rem;
+}
+
+.p-voting-text3 {
+  font-family: video, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  margin-left: 1rem;
+}
 }
 </style>
