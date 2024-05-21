@@ -2,8 +2,9 @@
   <div>
     <h1>{{ pageTitle }}</h1>
     <p>Welcome to my Nuxt.js homepage!</p>
-    <Pim />
-    <NuxtLink to="/about">About</NuxtLink>
+    <Pim/>
+    <NuxtLink to="/about">About</NuxtLink><br>
+    <NuxtLink to="/votingPage">Voting page</NuxtLink>
     <!-- This renders the Pim component -->
   </div>
 </template>
