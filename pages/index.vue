@@ -13,8 +13,8 @@
       <h2 class="h2-head" style="color: #9CF3FF;">Voting Guide</h2>
       </div>
     </header>
-      <img class="img-stars-top-mobile" src="/static/stars-top.png">
-      <img class="img-stars-top-desktop" src="/static/stars-top-desktop.png">
+      <img class="img-stars-top-mobile" src="/assets/stars-top.png">
+      <img class="img-stars-top-desktop" src="/assets/stars-top-desktop.png">
       <div class="div-maincontainer">
         <div class="white-box">
           <h1 class="h1-votingguide">{{ pageTitle }}</h1>
@@ -24,8 +24,8 @@
           </div>
         </div>
       </div>
-    <img class="img-stars-bottom-mobile" src="/static/stars-bottom.png">
-    <img class="img-stars-bottom-desktop" src="/static/stars-bottom-desktop.png">
+    <img class="img-stars-bottom-mobile" src="/assets/stars-bottom.png">
+    <img class="img-stars-bottom-desktop" src="/assets/stars-bottom-desktop.png">
   </div>
 </template>
 
