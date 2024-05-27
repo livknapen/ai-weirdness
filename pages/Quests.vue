@@ -4,6 +4,8 @@
         <h3>Choose a quest!</h3>
         <p>You can select different tasks with the arrows.</p>
     </div>
+    <div class="box" style="height: 100px; width: 400px"></div>
+
     <div id="slideshow-wrap">
         <input type="radio" id="button-1" name="controls" defaultChecked />
         <label for="button-1"></label>
