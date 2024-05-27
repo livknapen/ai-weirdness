@@ -1,0 +1,82 @@
+.white-box {
+	background-color: white;
+	margin-right: 2rem;
+	margin-left: 2rem;
+	padding: 1rlh;
+	border-radius: 58px 0px 58px 58px;
+}
+.white-box h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: Ethnocentric;
+}
+.white-box img {
+	display: block;
+	margin: 0 auto;
+}
+.profile-container {
+	padding-right: 2rem;
+	padding-left: 2rem;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+.profile-container .box {
+	padding: 1rlh;
+}
+.profile-grid {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.profile-grid div {
+	text-align: center;
+	margin-bottom: 9px;
+}
+.profile-header {
+	color: white;
+	font-size: 20px;
+	margin-bottom: 9px;
+	text-transform: capitalize;
+}
+.profile-button {
+	border: none;
+	padding: 6px 16px;
+	border-radius: 10px;
+	font-weight: 900;
+
+	margin: 0 auto;
+	display: block;
+}
+.profile-score {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 33px;
+}
+.profile-background {
+	background-color: #d9d9d9;
+	max-height: 94px;
+	max-width: 94px;
+	height: calc(94px - 2rlh);
+	padding: 1rlh;
+
+	color: white;
+
+	border-radius: 100%;
+
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.profile-stars-bottom {
+	position: relative;
+}
+.img-stars-bottom-mobile {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.img-stars-bottom-desktop {
+	display: none;
+}
