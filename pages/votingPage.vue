@@ -19,8 +19,8 @@
   </script>
   
   <style scoped>
-  h1 {
+  /* h1 {
     color: #333;
-  }
+  } */
   </style>
 
