@@ -17,53 +17,14 @@
       <img class="img-stars-top-desktop" src="/assets/stars-top-desktop.png">
       <div class="div-maincontainer">
         <div class="white-box">
-          <div class="div-progressbar">
-            <label for="file-voting"></label>
-            <progress id="file-voting" max="100" value="10"></progress>
-          </div>
-          <h1 class="h1-votingguide">{{ pageTitle }}</h1>
-          <p class="p-votingguide">Stimulate the economic growth of our moon colony and create prosperity for all residents.</p>
-          <div class="div-votingbuttons">
-            <button onclick="move()" class="button-agree"> 
-              <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <rect width="29" height="29" transform="matrix(1 0 0 -1 0 29)" fill="url(#pattern0_137_20)"/>
-              <defs>
-              <pattern id="pattern0_137_20" patternContentUnits="objectBoundingBox" width="1" height="1">
-              <use xlink:href="#image0_137_20" transform="scale(0.0111111)"/>
-              </pattern>
-              <image id="image0_137_20" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACtElEQVR4nO3du49NURTH8eMVz4ZoEInX4B8Q0Sk1GiIYdHRkEp2OWqMg+ANEIfHINAoJIjEyHqNSKWQwM4SRGGJGhq+czKkk4j72WWvte36ff2DW+t19T85ZZ989RSEiIiIiIiIiIiIiFoB1wDHgKvAQGAe+4usb8AQ4BSzOdiUAi6pwHwC/iG2kXAxFToD5wHFglLyMZLOygW3V1zFXJ4vogMPAFHkbKiIDBjK4DrdiqoiABigioAGKCGiAIgKaYRDoBxYoaBsvgD6taBsTLmHTTM+AhQraxiEFbeOOgrYxrqBtzChoG2MK2sYtBW3jgIKu33D51khB1++MHlhsnw636BHcbu6xWbMOu5Vd//jUqJno6p97eHcYxKCCtjGhoHtl7mHUSHRvFHSvzD2MGoluv4Ku32OTuQfNNgpsqj1kBc1uk5AVNG8167AzpFmHHd11GNF9tBE9GRqZ1l2HjXcK2oau0UYOakXX76npHg9gObAB2AdcBj7R+z6UPZuF/I/glwKngS/07kreWEQBrAcekb9Z4D1wu7wmm28JawWwpPoJWUp93n2FBCyrvm6pDHj3FFa5CoEfiYK+691PaMC5REFPl3c63v2EBayoNgemsNe7n9CYOxwqhUveveRwiNXrBEG/8u4lPOAIaaz17iU0YB7wPEHQ/d69hAfsSRD0Re8+sgDc6zLo+949ZAHYAfzuIuiP3j1kA7jRRdCz3vVnA9gK/Oww6O/e9WcFuNJh0JPetWcFWFMdKxz73IxeAFwIuXml1zB3tnS7XnrXnR1gVwdB3/SuOzvA6g6CPu9dd5aAyTaD1ky6w6CH2wh5pnyRkPzTbgLgWhtBX/euN1vA2TbeGW73rjdbwNEWQi6HUCe8a80asPM/IX/WsD9N0Kv+CrbcBzJW7uOo/kHDyhR/x9sf2G5fDIrarFcAAAAASUVORK5CYII="/>
-              </defs>
-              </svg> </button>
-              <button onclick="move()" class="button-neither"> 
-              <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <rect width="29" height="29" fill="url(#pattern0_294_430)"/>
-              <defs>
-              <pattern id="pattern0_294_430" patternContentUnits="objectBoundingBox" width="1" height="1">
-              <use xlink:href="#image0_294_430" transform="scale(0.0111111 0.0215909)"/>
-              </pattern>
-              <image id="image0_294_430" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEeUlEQVR4nO2cT4iXRRjH33JTdu1SlIKCEsSauBClop50wxWiP1e1QylehCCPoUSCB3+7SofcZD265imIioigQxJbehCJiE6lFey6iZq2ZJZufuTBEUT2nXfe953Zmdf3+Zz28ptnvs/7zsx3npl3s0xRFEVRFEVRFEWJB/AsMAScBC4D08Ak8AMwCmwFHo/YxWYD9AFf4cY/wGHgqdj9bgxAF/A28C/luQEMAvNi60gaYAHwHfX5EeiNrSdJgBXAr/jjCvBibF1JAawELuEfWTjfiK0vCYB1wFWHxe4D4DmgG1giCQROOCb79azNAKuBqYJEfQ08bWljA/CTwyI5kLUR4BngYkGCxEE87NDWPPPG25BR0+dbxCOmk38Ycy9/d2WJACwGfi8Y7tsrtLvL/DYPibnIp5ADMwQ5mCUAMB84Y0nGTWBLjfZfBa5Z2j8lL6IvMZM5AlZ4CVARmQaATyxJ+B/Y7CHOS0ZvHp26MWyJFr7wEsDvSLuXnR5j7QBuWR7oRh9Bhi1ioph47gi3sTdAzHct8c4DT9QNsNBim2T3Nd+bGgeAfmOx8jgGPJR5RtoEPrfF9RFkjyXAe16UOAAsA/609GUsZBEIeKzA4WyqG0B2UGdzGhcLtN6bmhxkaAK/WET+XHv4uo8omZdnQnLUXTfAC5YFYTykSGCu2dXlIUX8ZaHiz9Cf9y192e0jwIeWAJ8FnBuPW+LKfN3vO25Bnx61TCF/SYm2boAnLXZPeMebGgOwDzs7sggAL1v6NOwjwIBljrpVZbubB/BmQZKHsogAX+b0a8rL6JbdUMFQru2vgdcsD1T42KVINAsHDDPVQ/7zUg8yhSbZ5+fxN/BKzSRPW9o/DfRkCZBT6fvIZ4BFDlWztyq0u70gyb95rZrVxFjfUVMPkRH4qfjtEMf4RScawy6bCGCOQ/3iQqoHpSbh4XbJZnG0bYkxpxYbLG30At8UtCG26fmszcg5WsFwv8sJYBuw1LwBq4AR4HrB72TUrI2tMwmk9uvwZlc96l8TW19SiK0zifHFudgHDMli5lu53VOXMdmJxtaTNMZn173zNje2jsYgNzKNoZdLKy7IlnZ57H43FlMw3wIcBb43Rz83zV2Mb4H93u9JKIqiKIqiKA8K3Dk1HzI2sg4TunmyYJLjk0FbvNZC/Tf5fiZja0oSAhBbU5KgiZ4dNNGR3YVjmy60y41Q0l04tlmGdrgRSroLxzbL0A43QjnGHduUacGZrA1Qjk6s6ajxEGDhMgvsoOub7VNMj/mPLFdjrcIEcBcV+uDCFXNGWv7zCuAIkVdhEhjOZeJLzqp8nep6gi1MBBI50bBEXyt1d7tColMQOZHAwy6X6ApTRwqJ7iQwfY1UCdBt7jg73akLJNKF2ViQi9yIfGx6qPa3hqHFk4C7SA7KMdgUd9H0RE/Gql00nhCWiwC1i8aTQImyk7WBEDUB3GhX0d3TW+lEbE1JQgAyRRPdGDfiQDvcRQLXsTqxNT0QbsSCugtFURRFURRFURRFUZQsbW4DDY3qbZ4QD7kAAAAASUVORK5CYII="/>
-              </defs>
-              </svg> </button>
-              <button onclick="move()" class="button-disagree"> 
-              <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <rect width="29" height="29" transform="matrix(-1 0 0 1 29 0)" fill="url(#pattern0_137_19)"/>
-              <defs>
-              <pattern id="pattern0_137_19" patternContentUnits="objectBoundingBox" width="1" height="1">
-              <use xlink:href="#image0_137_19" transform="scale(0.0111111)"/>
-              </pattern>
-              <image id="image0_137_19" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACtElEQVR4nO3du49NURTH8eMVz4ZoEInX4B8Q0Sk1GiIYdHRkEp2OWqMg+ANEIfHINAoJIjEyHqNSKWQwM4SRGGJGhq+czKkk4j72WWvte36ff2DW+t19T85ZZ989RSEiIiIiIiIiIiIiFoB1wDHgKvAQGAe+4usb8AQ4BSzOdiUAi6pwHwC/iG2kXAxFToD5wHFglLyMZLOygW3V1zFXJ4vogMPAFHkbKiIDBjK4DrdiqoiABigioAGKCGiAIgKaYRDoBxYoaBsvgD6taBsTLmHTTM+AhQraxiEFbeOOgrYxrqBtzChoG2MK2sYtBW3jgIKu33D51khB1++MHlhsnw636BHcbu6xWbMOu5Vd//jUqJno6p97eHcYxKCCtjGhoHtl7mHUSHRvFHSvzD2MGoluv4Ku32OTuQfNNgpsqj1kBc1uk5AVNG8167AzpFmHHd11GNF9tBE9GRqZ1l2HjXcK2oau0UYOakXX76npHg9gObAB2AdcBj7R+z6UPZuF/I/glwKngS/07kreWEQBrAcekb9Z4D1wu7wmm28JawWwpPoJWUp93n2FBCyrvm6pDHj3FFa5CoEfiYK+691PaMC5REFPl3c63v2EBayoNgemsNe7n9CYOxwqhUveveRwiNXrBEG/8u4lPOAIaaz17iU0YB7wPEHQ/d69hAfsSRD0Re8+sgDc6zLo+949ZAHYAfzuIuiP3j1kA7jRRdCz3vVnA9gK/Oww6O/e9WcFuNJh0JPetWcFWFMdKxz73IxeAFwIuXml1zB3tnS7XnrXnR1gVwdB3/SuOzvA6g6CPu9dd5aAyTaD1ky6w6CH2wh5pnyRkPzTbgLgWhtBX/euN1vA2TbeGW73rjdbwNEWQi6HUCe8a80asPM/IX/WsD9N0Kv+CrbcBzJW7uOo/kHDyhR/x9sf2G5fDIrarFcAAAAASUVORK5CYII="/>
-              </defs>
-              </svg> </button>
-          </div>
-          <div class="div-voting-text">
-            <p class="p-voting-text">Agree</p>
-            <p class="p-voting-text2">Neither</p>
-            <p class="p-voting-text3">Disagree</p>
-          </div>
+          <ProgressBar />
+            <optionbuttons/>
         </div>
       </div>
+      <div class="div-stars-bottom">
     <img class="img-stars-bottom-mobile" src="/assets/stars-bottom.png">
     <img class="img-stars-bottom-desktop" src="/assets/stars-bottom-desktop.png">
+  </div>
   </div>
 </template>
 
@@ -72,35 +33,15 @@
 
 
 <script>
-import WhiteBox from "@/components/WhiteBox.vue"; // Import the WhiteBox component
+import WhiteBox from "@/components/WhiteBox.vue";
+import ProgressBar from '@/components/progressbar.vue';
+import optionbuttons from '@/components/OptionButtons.vue';
 export default {
   components: {
-    WhiteBox, // Register the WhiteBoxe component
+    WhiteBox,
+    ProgressBar,
+    optionbuttons,
   },
-  data() {
-    return {
-      pageTitle: "Economy", // Set the pageTitle data property so you can import it in the HTML. It's basically a variable
-    };
-  },
-};
-
-var i = 0;
-function move() {
-  if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("div-progressbar");
-    var width = 1;
-    var id = setInterval(frame, 10);
-    function frame() {
-      if (width >= 100) {
-        clearInterval(id);
-        i = 0;
-      } else {
-        width++;
-        elem.style.width = width + "%";
-      }
-    }
-  }
 };
 </script>
 
@@ -163,7 +104,6 @@ body {
 
 .img-stars-bottom-mobile {
   width: 100%;
-  margin-top: 30rem;
 }
 
 .img-stars-top-desktop {
@@ -212,6 +152,7 @@ progress {
   border-color: black;
   border-style: solid;
   margin-top: 2rem;
+  transition: width 0.3s ease;
 }
 
 progress::-webkit-progress-bar {
@@ -255,7 +196,7 @@ label {
   justify-content: space-between;
 }
 
-.button-agree {
+.buttonagree {
   background-color: #17BA31;
   border: none;
   border-radius: 50%;
@@ -297,19 +238,56 @@ label {
   font-size: 15px;
 }
 
-.p-voting-text2 {
-  font-family: video, serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  margin-left: 0.7rem;
+.div-results {
+  display: flex;
+  flex-direction: row;
 }
 
-.p-voting-text3 {
+.div-button-choose {
+  display: flex;
+  justify-content: center;
+}
+
+.button-choose-side {
+  display: flex;
+  background-color: #000000;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  color: #ffffff;
   font-family: video, serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 24px;
+}
+
+.img-pr-p {
+  width: 50%;
+  height: 10%;
+}
+
+.img-pr-d {
+  display: none;
+}
+
+.p-votingguide-p {
+  color: black;
+  font-family: video, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  margin-bottom: 5rem;
+  margin-left: 1rem;
+}
+
+.p-votingguide-d {
+  display: none;
+}
+
+.div-stars-bottom {
+  position: relative;
 }
 }
 
@@ -404,6 +382,7 @@ label {
   font-size: 33px;
   margin-left: 4rem;
   margin-right: 7rem;
+  margin-bottom: 8rem;
 }
 
 .div-progressbar {
@@ -446,7 +425,6 @@ label {
   font-size: 35px;
   border: none;
   border-radius: 10px;
-  margin-top: 8rem;
   padding: 1rem 5rem;
   cursor: pointer;
 }
@@ -522,6 +500,57 @@ label {
   font-weight: 400;
   font-size: 15px;
   margin-left: 1rem;
+}
+
+.div-results {
+  display: flex;
+  flex-direction: row;
+  margin-left: 3rem;
+}
+
+.div-button-choose {
+  display: flex;
+  justify-content: center;
+}
+
+.button-choose-side {
+  background-color: #000000;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: video, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  margin-top: -5rem;
+}
+
+.img-pr-p {
+  display: none;
+}
+
+.img-pr-d {
+  display: flex;
+  margin-left: 1rem;
+  margin-right: 5rem;
+}
+
+.p-votingguide-p {
+  display: none;
+}
+
+.p-votingguide-d {
+  color: black;
+  font-family: video, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 5rem;
+  margin-left: 1rem;
+  margin-right: 10rem;
 }
 }
 </style>
