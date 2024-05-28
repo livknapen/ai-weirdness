@@ -4,10 +4,15 @@
         <h3>Choose a quest!</h3>
         <p>You can select different tasks with the arrows.</p>
     </div>
-    <div class="box" style="height: 100px; width: 400px"></div>
+    <div class="box" style="height: 313px; width: 335px">
+        <h3>AI image vs Human image</h3><br>
+        <hr class="line1"><br>
+        <p>In this quest you must pick between two images. Choose the image you think your president supports.</p><br>
+        <p class="points">+1000 points</p>
+    </div>
 
     <div id="slideshow-wrap">
-        <input type="radio" id="button-1" name="controls" defaultChecked />
+        <input type="radio" id="button-1" name="controls" checked="checked" />
         <label for="button-1"></label>
         <input type="radio" id="button-2" name="controls" />
         <label for="button-2"></label>
@@ -19,7 +24,7 @@
         <div id="slideshow-inner">
             <ul>
                 <li id="slide1">
-                    <img class="quest1" src="/img/quest1.svg" alt="Quests" />
+                    <img src="/img/quest1.svg" alt="Quests" />
                 </li>
                 <li id="slide2">
                     <img src="/img/quest2.svg" alt="Quests"/>
@@ -63,6 +68,47 @@
         margin-top: 5px;
     }
 
+    .box {
+        position: relative;
+        margin: 35px 0 0 27px;
+        padding: 20px;
+        background: radial-gradient(circle at center, #395B77 0%, #263A4B 100%);
+        border: solid;
+        border-color: white;
+        border-width: 2px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        overflow: hidden;
+    }
+
+    .box::before, .box::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: white;
+    }
+
+    .box::before {
+        left: 0;
+        clip-path: polygon(0 10%, 100% 30%, 100% 70%, 0 90%);
+    }
+
+    .box::after {
+        right: 0;
+        clip-path: polygon(100% 10%, 0 30%, 0 70%, 100% 90%);
+    }
+
+    hr.line1 {
+        border-bottom: solid 3px white;
+    }
+
+    p.points {
+        color: #9CF3FF;
+        text-align: center;
+    }
+
     @font-face {
         font-family: 'WebSymbolsRegular';
         src: url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.eot');
@@ -74,7 +120,7 @@
         height: 150px;
         max-width: 275px;
         margin: auto;
-        margin-top: 100px;
+        margin-top: 50px;
         position: relative;
     }
 
