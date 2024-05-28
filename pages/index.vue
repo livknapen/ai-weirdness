@@ -1,4 +1,5 @@
 <template>
+  <link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
   <div>
     <header>
       <div class="div-header-mobile">
@@ -81,7 +82,9 @@ body {
 
   .h2-head {
     color: white;
-    font-family: alata;
+    font-family: 'Alata';
+    font-style: normal;
+    font-weight: 400;
     margin-bottom: 2rem;
     font-size: 32px;
     margin-top: 4rem;
