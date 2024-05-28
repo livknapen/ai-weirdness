@@ -1,5 +1,7 @@
 <template>
   <link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
+  <link href="https://fonts.cdnfonts.com/css/ethnocentric" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/clw2vbx.css">
   <div>
     <header>
       <div class="div-header-mobile">
@@ -70,7 +72,7 @@ body {
 
   .h1-head {
     color: white;
-    font-family: ethnocentric;
+    font-family: 'Ethnocentric Rg';
     margin-bottom: 2rem;
     font-size: 32px;
     margin-top: 4rem;
@@ -129,7 +131,7 @@ body {
 
   .h1-votingguide {
     color: #344F65;
-    font-family: ethnocentric;
+    font-family: 'Ethnocentric Rg';
     margin-bottom: 1rem;
     font-size: 43px;
     margin-top: 2rem;
@@ -137,7 +139,7 @@ body {
 
   .p-votingguide {
     color: black;
-    font-family: video, serif;
+    font-family: 'Video';
     font-style: normal;
     font-weight: 400;
     font-size: 29px;
@@ -154,7 +156,7 @@ body {
   .button-getstarted {
     color: white;
     background-color: black;
-    font-family: video, serif;
+    font-family: 'Video';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -253,7 +255,7 @@ body {
 
   .p-votingguide-p {
     color: black;
-    font-family: video, serif;
+    font-family: 'Video';
     font-style: normal;
     font-weight: 400;
     font-size: 21px;
@@ -285,7 +287,7 @@ body {
 
   .h1-head {
     color: white;
-    font-family: ethnocentric;
+    font-family: 'Ethnocentric Rg';
     margin-bottom: 2rem;
     font-size: 64px;
     margin-top: 3rem;
@@ -295,7 +297,7 @@ body {
 
   .h2-head {
     color: white;
-    font-family: alata;
+    font-family: 'Alata';
     font-style: normal;
     font-weight: 300;
     margin-bottom: 2rem;
@@ -345,7 +347,7 @@ body {
 
   .h1-votingguide {
     color: #344F65;
-    font-family: ethnocentric;
+    font-family: 'Ethnocentric Rg';
     margin-bottom: 2rem;
     font-size: 45px;
     margin-top: 4rem;
@@ -354,7 +356,7 @@ body {
 
   .p-votingguide {
     color: black;
-    font-family: video, serif;
+    font-family: 'Video';
     font-style: normal;
     font-weight: 400;
     font-size: 33px;
@@ -373,7 +375,7 @@ body {
   .button-getstarted {
     color: white;
     background-color: black;
-    font-family: video, serif;
+    font-family: 'Video';
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
@@ -434,14 +436,14 @@ body {
   }
 
   .p-voting-text {
-    font-family: video, serif;
+    font-family: 'Video';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
   }
 
   .p-voting-text2 {
-    font-family: video, serif;
+    font-family: 'Video';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -449,7 +451,7 @@ body {
   }
 
   .p-voting-text3 {
-    font-family: video, serif;
+    font-family: 'Video';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -497,7 +499,7 @@ body {
 
   .p-votingguide-d {
     color: black;
-    font-family: video, serif;
+    font-family: 'Video';
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
