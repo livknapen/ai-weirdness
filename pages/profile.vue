@@ -1,87 +1,62 @@
 <template>
 	<div class="background">
-		<header>
-			<!-- Mobile -->
-			<div class="div-header-mobile">
-				<h1 class="h1-head">{{ pageTitle }}</h1>
-				<h2 class="h2-head">[ MENU ]</h2>
+		<Navbar />
+
+		<div class="profile-content">
+			<div class="profile-content-1">
+				<div class="white-box">
+					<img src="/assests/profile.svg" alt="#" />
+					<h2>Username</h2>
+				</div>
+
+				<div class="profile-divider" style="margin-bottom: 30px"></div>
 			</div>
-			<!-- Desktop -->
-			<div class="div-header-desktop">
-				<h1 class="h1-head">{{ pageTitle }}</h1>
-				<h2 class="h2-head">Home</h2>
-				<h2 class="h2-head">Quests</h2>
-				<h2 class="h2-head">Profile</h2>
-				<h2 class="h2-head">Voting Guide</h2>
-			</div>
-		</header>
 
-		<div class="white-box">
-			<img src="/assests/profile.svg" alt="#" />
-			<h2>Username</h2>
-		</div>
-
-		<div style="margin-bottom: 30px"></div>
-
-		<div class="profile-container">
-			<div class="box">
-				<div class="profile-grid">
-					<div>
-						<p class="profile-header">AI president</p>
-						<img src="/assests/ai-president.png" alt="" />
-					</div>
-					<div>
-						<p class="profile-header">Human president</p>
-						<img src="/assests/human-president.png" alt="" />
+			<div class="profile-content-2">
+				<div class="profile-container">
+					<div class="box">
+						<div class="profile-grid">
+							<div>
+								<p class="profile-header">AI president</p>
+								<img src="/assests/ai-president.png" alt="" />
+							</div>
+							<div>
+								<p class="profile-header">Human president</p>
+								<img src="/assests/human-president.png" alt="" />
+							</div>
+						</div>
+						<button class="profile-button">Choose a side</button>
 					</div>
 				</div>
-				<button class="profile-button">Choose a side</button>
+
+				<div class="profile-divider" style="margin-bottom: 30px"></div>
 			</div>
-		</div>
 
-		<div style="margin-bottom: 30px"></div>
-
-		<div class="profile-container">
-			<div class="profile-score">
-				<div class="profile-background">
-					<h3>69</h3>
-					<p>
-						Completed <br />
-						quests
-					</p>
-				</div>
-				<div class="profile-background">
-					<h3>#1</h3>
-					<p>Ranking</p>
-				</div>
-				<div class="profile-background">
-					<h3>1000</h3>
-					<p>
-						Collected <br />
-						Points
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- <div class="profile-stars-bottom">
-			<img src="/assests/stars-bottom.png" class="img-stars-bottom-mobile" />
-			<img
-				src="/assests/stars-bottom-desktop.png"
-				class="img-stars-bottom-desktop"
-			/>
-		</div> -->
-
-		<!-- <div class="container">
-			<div class="box">
-				<div class="profile-padding">
-					<div class="profile-grid">
-						<div><p>AI president</p></div>
-						<div><p>Human president</p></div>
+			<div class="profile-content-3">
+				<div class="profile-container">
+					<div class="profile-score">
+						<div class="profile-background">
+							<h3>69</h3>
+							<p>
+								Completed <br />
+								quests
+							</p>
+						</div>
+						<div class="profile-background">
+							<h3>#1</h3>
+							<p>Ranking</p>
+						</div>
+						<div class="profile-background">
+							<h3>1000</h3>
+							<p>
+								Collected <br />
+								Points
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
 	</div>
 </template>
 
@@ -89,13 +64,9 @@
 import "@/assests/css/main.css"; // Import the main css
 import "@/assests/css/profile.css"; // Import the profile css
 
-export default {
-	data() {
-		return {
-			pageTitle: "Profile",
-		};
-	},
-};
+definePageMeta({
+	title: "Profile",
+});
 </script>
 
 <style>
