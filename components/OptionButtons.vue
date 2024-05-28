@@ -1,5 +1,6 @@
 <template>
     <div>
+        <ProgressBar :progress="progress" />
         <div v-if="currentQuestion < questions.length">
             <h1 class="h1-votingguide">{{ questions[currentQuestion].title }}</h1>
             <p class="p-votingguide">{{ questions[currentQuestion].text }}</p>
@@ -73,21 +74,27 @@
     </div>
 </template>
 
+
 <script>
+import ProgressBar from './progressbar.vue';
+
 export default {
+    components: {
+        ProgressBar
+    },
     data() {
         return {
             questions: [
                 { title: "Economy", text: "In this new economy, vehicles and transportation based on fossil fuels should no longer be allowed." },
-                { title: "Health Care", text: "Healthcare should be free. " },
+                { title: "Health Care", text: "Healthcare should be free for every individual who lives on the moon." },
                 { title: "Medical", text: "AI-Robots should be allowed to conduct life-threatening surgical operations." },
                 { title: "Law", text: "A law should only be able to be approved by a human politician." },
-                { title: "Climate Change", text: "In order to combat climate change, all new buildings constructed should be required to incorporate renewable energy sources such as solar panels or wind turbines." },
+                { title: "Energy Sources", text: "All new buildings constructed should be required to incorporate renewable energy sources." },
                 { title: "Voting", text: "Mandatory voting should be implemented to ensure maximum participation in democratic processes." },
-                { title: "Police arrest", text: "Police have the right to be armed and to use force against individuals who are a large threat or are heavily resisting arrest. " },
+                { title: "Police arrest", text: "Police have the right to be armed and to use force against individuals who are a large threat." },
                 { title: "GDP expense", text: "4% of the society’s GDP should go towards further space exploration." },
-                { title: "Legal system", text: "The legal system should be based on restorative justice principles rather than punitive measures, focusing on rehabilitation and reconciliation." },
-                { title: "Family", text: "Every couple should have at least two children, if possible, to battle population shrinking and unemployment " }
+                { title: "Legal system", text: "The legal system should be based on restorative justice principles rather than punitive measures." },
+                { title: "Family", text: "Every couple should have at least two children, if possible, to battle population shrinking and unemployment." }
             ],
             userAnswers: [],
             currentQuestion: 0,
@@ -126,7 +133,7 @@ export default {
             } else if (scores.presidentai > scores.presidenthuman) {
                 this.result = { image: "/assets/president-ai.png", text: "Based on the answers you entered in the voting guide, President AI fits your statements." };
             } else {
-                this.result = { text: "You align equally with both presidents!" };
+                this.result = { image: "/assets/both-presidents.png", text: "You align equally with both presidents!" };
             }
         },
         updateProgress() {
@@ -134,5 +141,4 @@ export default {
         }
     }
 };
-
 </script>

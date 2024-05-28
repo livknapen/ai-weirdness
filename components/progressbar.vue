@@ -2,18 +2,20 @@
   <div>
     <div class="div-progressbar">
     </div>
-    <div class="progress">
+    <div class="progress" :style="{ width: progress + '%' }">
 
     </div>
   </div>
 </template>
  
 <script>
-import optionbuttons from '@/components/OptionButtons.vue';
 export default {
-  components: {
-    optionbuttons,
-  },
+  props: {
+    progress: {
+      type: Number,
+      required: true
+    }
+  }
 };
 </script>
 
@@ -33,24 +35,10 @@ export default {
 
 .progress {
   border-radius: 58px;
-  width: 70%;
   height: 22px;
-  border-color: black;
-  border-style: solid;
   transition: width 0.3s ease;
-  margin-left: 13%;
-}
-
-.progress::-webkit-progress-bar {
-  background-color: white;
-  border-radius: 58px;
-}
-
-.progress::-webkit-progress-value {
   background-color: #344F65;
-  border-radius: 58px;
 }
-
 
 .div-button {
   display: flex;
