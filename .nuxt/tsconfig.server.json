@@ -84,9 +84,6 @@
       ],
       "public": [
         "../public"
-      ],
-      "public/*": [
-        "../public/*"
       ]
     }
   },
