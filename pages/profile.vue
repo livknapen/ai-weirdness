@@ -83,7 +83,6 @@ export default {
 	margin: 0;
 
 	overflow: hidden;
-	box-sizing: border-box;
 }
 
 @media only screen and (max-width: 768px) {
