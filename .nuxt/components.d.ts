@@ -1,6 +1,7 @@
 
 interface _GlobalComponents {
-      'Navbar': typeof import("../components/Navbar.vue")['default']
+      'MobileMenu': typeof import("../components/MobileMenu.vue")['default']
+    'Navbar': typeof import("../components/Navbar.vue")['default']
     'Pim': typeof import("../components/Pim.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -23,7 +24,8 @@ interface _GlobalComponents {
     'Head': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Head']
     'Html': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
-      'LazyNavbar': typeof import("../components/Navbar.vue")['default']
+      'LazyMobileMenu': typeof import("../components/MobileMenu.vue")['default']
+    'LazyNavbar': typeof import("../components/Navbar.vue")['default']
     'LazyPim': typeof import("../components/Pim.vue")['default']
     'LazyNuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
     'LazyNuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -60,6 +62,7 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
+export const MobileMenu: typeof import("../components/MobileMenu.vue")['default']
 export const Navbar: typeof import("../components/Navbar.vue")['default']
 export const Pim: typeof import("../components/Pim.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
@@ -83,6 +86,7 @@ export const Style: typeof import("../node_modules/nuxt/dist/head/runtime/compon
 export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Head']
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
+export const LazyMobileMenu: typeof import("../components/MobileMenu.vue")['default']
 export const LazyNavbar: typeof import("../components/Navbar.vue")['default']
 export const LazyPim: typeof import("../components/Pim.vue")['default']
 export const LazyNuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']

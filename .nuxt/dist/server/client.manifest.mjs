@@ -1,1 +1,1 @@
-export { default } from "file:///C:/Users/Pim/source/repos/s3-ai-weirdness-1/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
+export { default } from "file:///C:/Users/danny/Desktop/transmedia-s3/s3-ai-weirdness/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
