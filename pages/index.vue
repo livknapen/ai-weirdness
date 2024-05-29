@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<style scoped>
+<style>
 h1 {
   color: #333;
 }

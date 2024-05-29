@@ -1,26 +1,55 @@
 <template>
-    <img class="stars-bg" src="/img/stars.svg" alt="Stars" />
+    <link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
+    <link href="https://fonts.cdnfonts.com/css/ethnocentric" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/clw2vbx.css">
+    <!-- Top background stars image -->
+    <img class="stars-bg-top" src="/img/stars.svg" alt="Stars" />
+
+    <!-- Header text section -->
     <div class="header-text">
         <h3>Choose a quest!</h3>
         <p>You can select different tasks with the arrows.</p>
+    </div>
+
+    <!-- Quest box -->
+    <div class="box" style="height: 313px; width: 335px">
+        <h3>AI image vs Human image</h3><br>
+        <hr class="line1"><br>
+        <p>In this quest you must pick between two images. Choose the image you think your president supports.</p><br>
+        <p class="points">+1000 points</p><br>
+        <NuxtLink to="/first-quest"><button class="button-main">Start Quest</button></NuxtLink>
     </div>
     <div class="box" style="height: 313px; width: 335px">
         <h3>AI image vs Human image</h3><br>
         <hr class="line1"><br>
         <p>In this quest you must pick between two images. Choose the image you think your president supports.</p><br>
-        <p class="points">+1000 points</p>
+        <p class="points">+1000 points</p><br>
+        <button class="button-main">Start Quest</button>
+    </div>
+    <div class="box" style="height: 313px; width: 335px">
+        <h3>AI image vs Human image</h3><br>
+        <hr class="line1"><br>
+        <p>In this quest you must pick between two images. Choose the image you think your president supports.</p><br>
+        <p class="points">+1000 points</p><br>
+        <button class="button-main">Start Quest</button>
     </div>
 
+    <!-- Slideshow wrapper -->
     <div id="slideshow-wrap">
+        <!-- Radio buttons for slideshow controls -->
         <input type="radio" id="button-1" name="controls" checked="checked" />
         <label for="button-1"></label>
         <input type="radio" id="button-2" name="controls" />
         <label for="button-2"></label>
         <input type="radio" id="button-3" name="controls" />
         <label for="button-3"></label>
+
+        <!-- Slideshow navigation arrows -->
         <label for="button-1" class="arrows" id="arrow-1">></label>
         <label for="button-2" class="arrows" id="arrow-2">></label>
         <label for="button-3" class="arrows" id="arrow-3">></label>
+
+        <!-- Slideshow inner content -->
         <div id="slideshow-inner">
             <ul>
                 <li id="slide1">
@@ -35,29 +64,40 @@
             </ul>
         </div>
     </div>
+
+    <!-- Bottom background stars image -->
+    <img class="stars-bg-bottom" src="/img/stars-bottom.svg" alt="Stars" />
 </template>
 
 <style>
     @import url("https://fonts.cdnfonts.com/css/ethnocentric");
+
+    /* General body styling */
     body {
         background-color: #061929;
         margin: 0;
         padding: 0;
-        font-family: video, serif;
+        font-family: 'video';
         font-style: normal;
         font-weight: 350;
         background-repeat: repeat;
-        height: 500px;
     }
   
-    .stars-bg {
+    /* Top and bottom stars background positioning */
+    .stars-bg-top {
         margin-top: -50px;
     }
+
+    .stars-bg-bottom {
+        position: absolute;
+    }
   
+    /* Header text styling */
     .header-text {
         margin: 0vw 10vw;
     }
 
+    /* General text styling */
     h3 {
         color: white;
         margin-bottom: 0;
@@ -68,6 +108,7 @@
         margin-top: 5px;
     }
 
+    /* Quest box styling */
     .box {
         position: relative;
         margin: 35px 0 0 27px;
@@ -81,6 +122,7 @@
         overflow: hidden;
     }
 
+    /* Box pseudo-elements for decorative borders */
     .box::before, .box::after {
         content: "";
         position: absolute;
@@ -100,21 +142,42 @@
         clip-path: polygon(100% 10%, 0 30%, 0 70%, 100% 90%);
     }
 
+    /* Horizontal line in the box */
     hr.line1 {
         border-bottom: solid 3px white;
     }
 
+    /* Points text styling */
     p.points {
         color: #9CF3FF;
         text-align: center;
     }
 
+    /* Start quest button styling */
+    .button-main {
+        background-color: black;
+        color: white;
+        height: 50px;
+        width: 250px;
+        margin-left: 40px;
+        border-radius: 10px;
+        font-family: video, serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+    }
+
+    /* Font-face definition for custom font */
     @font-face {
         font-family: 'WebSymbolsRegular';
         src: url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.eot');
-        src: url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'), url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.woff') format('woff'), url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.ttf') format('truetype'), url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont#WebSymbolsRegular') format('svg');
+        src: url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'), 
+             url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.woff') format('woff'), 
+             url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.ttf') format('truetype'), 
+             url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont#WebSymbolsRegular') format('svg');
     }
 
+    /* Slideshow wrapper styling */
     #slideshow-wrap {
         display: block;
         height: 150px;
@@ -124,6 +187,7 @@
         position: relative;
     }
 
+    /* Slideshow inner container styling */
     #slideshow-inner {
         width: 100%;
         height: 100%;
@@ -131,7 +195,8 @@
         position: relative;
     }
 
-    #slideshow-inner>ul {
+    /* Slideshow inner list styling */
+    #slideshow-inner > ul {
         list-style: none;
         height: 100%;
         width: 500%;
@@ -145,14 +210,16 @@
         transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
     }
 
-    #slideshow-inner>ul>li {
+    /* Slideshow list item styling */
+    #slideshow-inner > ul > li {
         width: 20%;
         height: 320px;
         float: left;
         position: relative;
     }
 
-    #slideshow-inner>ul>li>img {
+    /* Slideshow images styling */
+    #slideshow-inner > ul > li > img {
         margin: auto;
         height: 100%;
         margin-top: -90px;
@@ -160,6 +227,7 @@
         margin-left: -35px;
     }
 
+    /* Hide radio buttons for slideshow controls */
     #slideshow-wrap input[type=radio] {
         position: absolute;
         left: 50%;
@@ -168,24 +236,36 @@
         visibility: hidden;
     }
 
-    #slideshow-wrap label:not(.arrows):active { bottom: -46px }
+    /* Change background color of labels when active */
+    #slideshow-wrap input[type=radio]#button-1:checked ~ label[for=button-1],
+    #slideshow-wrap input[type=radio]#button-2:checked ~ label[for=button-2],
+    #slideshow-wrap input[type=radio]#button-3:checked ~ label[for=button-3] {
+        background-color: white;
+    }
 
-    #slideshow-wrap input[type=radio]#button-1:checked~label[for=button-1] { background-color: white }
+    /* Position labels for radio buttons */
+    #slideshow-wrap label[for=button-1] {
+        margin-left: -36px;
+    }
 
-    #slideshow-wrap input[type=radio]#button-2:checked~label[for=button-2] { background-color: white }
+    #slideshow-wrap label[for=button-2] {
+        margin-left: -18px;
+    }
 
-    #slideshow-wrap input[type=radio]#button-3:checked~label[for=button-3] { background-color: white }
+    /* Slide position controls */
+    #slideshow-wrap input[type=radio]#button-1:checked ~ #slideshow-inner > ul {
+        left: 0;
+    }
 
-    #slideshow-wrap label[for=button-1] { margin-left: -36px }
+    #slideshow-wrap input[type=radio]#button-2:checked ~ #slideshow-inner > ul {
+        left: -100%;
+    }
 
-    #slideshow-wrap label[for=button-2] { margin-left: -18px }
+    #slideshow-wrap input[type=radio]#button-3:checked ~ #slideshow-inner > ul {
+        left: -200%;
+    }
 
-    #slideshow-wrap input[type=radio]#button-1:checked~#slideshow-inner>ul { left: 0 }
-
-    #slideshow-wrap input[type=radio]#button-2:checked~#slideshow-inner>ul { left: -100% }
-
-    #slideshow-wrap input[type=radio]#button-3:checked~#slideshow-inner>ul { left: -200% }
-
+    /* Navigation arrows styling */
     label.arrows {
         font-family: video, serif;
         font-size: 75pt;
@@ -195,7 +275,9 @@
         top: 50%;
         display: none;
         cursor: pointer;
-        z-index: 1;
+        z-index: 1
+
+;
         background-color: transparent;
         -webkit-transition: opacity .2s;
         -moz-transition: opacity .2s;
@@ -203,16 +285,30 @@
         transition: opacity .2s;
     }
 
-    label.arrows:hover { opacity: 1 }
+    /* Show arrows on hover */
+    label.arrows:hover {
+        opacity: 1;
+    }
 
-    label.arrows:active { margin-top: -23px }
+    /* Adjust margin for active state of arrows */
+    label.arrows:active {
+        margin-top: -23px;
+    }
 
-    input[type=radio]#button-1:checked~.arrows#arrow-2, input[type=radio]#button-2:checked~.arrows#arrow-3, input[type=radio]#button-3:checked~.arrows#arrow-4, input[type=radio]#button-4:checked~.arrows#arrow-5 {
+    /* Display the appropriate arrows based on active radio button */
+    input[type=radio]#button-1:checked ~ .arrows#arrow-2,
+    input[type=radio]#button-2:checked ~ .arrows#arrow-3,
+    input[type=radio]#button-3:checked ~ .arrows#arrow-4,
+    input[type=radio]#button-4:checked ~ .arrows#arrow-5 {
         right: -55px;
         display: block;
     }
 
-    input[type=radio]#button-2:checked~.arrows#arrow-1, input[type=radio]#button-3:checked~.arrows#arrow-2, input[type=radio]#button-4:checked~.arrows#arrow-3, input[type=radio]#button-5:checked~.arrows#arrow-4 {
+    /* Show left arrows and flip them horizontally */
+    input[type=radio]#button-2:checked ~ .arrows#arrow-1,
+    input[type=radio]#button-3:checked ~ .arrows#arrow-2,
+    input[type=radio]#button-4:checked ~ .arrows#arrow-3,
+    input[type=radio]#button-5:checked ~ .arrows#arrow-4 {
         left: -55px;
         display: block;
         -webkit-transform: scaleX(-1);
@@ -222,9 +318,12 @@
         transform: scaleX(-1);
     }
 
-    input[type=radio]#button-2:checked~.arrows#arrow-1 { left: -19px }
+    /* Adjust left margin for specific slides */
+    input[type=radio]#button-2:checked ~ .arrows#arrow-1 {
+        left: -19px;
+    }
 
-    input[type=radio]#button-3:checked~.arrows#arrow-2 { left: -37px }
-
-    input[type=radio]#button-5:checked~.arrows#arrow-4 { left: -73px }
+    input[type=radio]#button-3:checked ~ .arrows#arrow-2 {
+        left: -37px;
+    }
 </style>
