@@ -1,11 +1,14 @@
 <template>
-  <link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
-  <link href="https://fonts.cdnfonts.com/css/ethnocentric" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.typekit.net/clw2vbx.css">
+  <link href="https://fonts.googleapis.com/css?family=Alata" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/ethnocentric" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.typekit.net/clw2vbx.css" />
   <div>
     <header>
       <div class="div-header-mobile">
-        <h1 class="h1-head">voting <br> guide</h1>
+        <h1 class="h1-head">
+          voting <br />
+          guide
+        </h1>
         <h2 class="h2-head">[ MENU ]</h2>
       </div>
       <div class="div-header-desktop">
@@ -13,31 +16,30 @@
         <h2 class="h2-head">Home</h2>
         <h2 class="h2-head">Quests</h2>
         <h2 class="h2-head">Profile</h2>
-        <h2 class="h2-head" style="color: #9CF3FF;">Voting Guide</h2>
+        <h2 class="h2-head" style="color: #9cf3ff">Voting Guide</h2>
       </div>
     </header>
-    <img class="img-stars-top-mobile" src="/assets/stars-top.png">
-    <img class="img-stars-top-desktop" src="/assets/stars-top-desktop.png">
+    <img class="img-stars-top-mobile" src="/assets/stars-top.png" />
+    <img class="img-stars-top-desktop" src="/assets/stars-top-desktop.png" />
     <div class="div-maincontainer">
       <div class="white-box">
         <optionbuttons />
       </div>
     </div>
     <div class="div-stars-bottom">
-      <img class="img-stars-bottom-mobile" src="/assets/stars-bottom.png">
-      <img class="img-stars-bottom-desktop" src="/assets/stars-bottom-desktop.png">
+      <img class="img-stars-bottom-mobile" src="/assets/stars-bottom.png" />
+      <img
+        class="img-stars-bottom-desktop"
+        src="/assets/stars-bottom-desktop.png"
+      />
     </div>
   </div>
 </template>
 
-
-
-
-
 <script>
 import WhiteBox from "@/components/WhiteBox.vue";
-import ProgressBar from '@/components/progressbar.vue';
-import optionbuttons from '@/components/OptionButtons.vue';
+import ProgressBar from "@/components/progressbar.vue";
+import optionbuttons from "@/components/OptionButtons.vue";
 export default {
   components: {
     WhiteBox,
@@ -72,7 +74,7 @@ body {
 
   .h1-head {
     color: white;
-    font-family: 'Ethnocentric Rg';
+    font-family: "Ethnocentric Rg";
     margin-bottom: 2rem;
     font-size: 32px;
     margin-top: 4rem;
@@ -80,7 +82,7 @@ body {
 
   .h2-head {
     color: white;
-    font-family: 'Alata';
+    font-family: "Alata";
     font-style: normal;
     font-weight: 400;
     margin-bottom: 2rem;
@@ -130,8 +132,8 @@ body {
   }
 
   .h1-votingguide {
-    color: #344F65;
-    font-family: 'Ethnocentric Rg';
+    color: #344f65;
+    font-family: "Ethnocentric Rg";
     margin-bottom: 1rem;
     font-size: 43px;
     margin-top: 2rem;
@@ -139,24 +141,17 @@ body {
 
   .p-votingguide {
     color: black;
-    font-family: 'Video';
+    font-family: "Video";
     font-style: normal;
     font-weight: 400;
     font-size: 29px;
     margin-bottom: 5rem;
   }
 
-  label {
-    font-size: 20px;
-    font-weight: bold;
-    display: block;
-    margin: 20px 0;
-  }
-
   .button-getstarted {
     color: white;
     background-color: black;
-    font-family: 'Video';
+    font-family: "Video";
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -178,7 +173,7 @@ body {
   }
 
   .buttonagree {
-    background-color: #17BA31;
+    background-color: #17ba31;
     border: none;
     border-radius: 50%;
     display: flex;
@@ -196,7 +191,7 @@ body {
   }
 
   .button-disagree {
-    background-color: #BA1717;
+    background-color: #ba1717;
     border: none;
     border-radius: 50%;
     display: flex;
@@ -255,7 +250,7 @@ body {
 
   .p-votingguide-p {
     color: black;
-    font-family: 'Video';
+    font-family: "Video";
     font-style: normal;
     font-weight: 400;
     font-size: 21px;
@@ -287,7 +282,7 @@ body {
 
   .h1-head {
     color: white;
-    font-family: 'Ethnocentric Rg';
+    font-family: "Ethnocentric Rg";
     margin-bottom: 2rem;
     font-size: 64px;
     margin-top: 3rem;
@@ -297,7 +292,7 @@ body {
 
   .h2-head {
     color: white;
-    font-family: 'Alata';
+    font-family: "Alata";
     font-style: normal;
     font-weight: 300;
     margin-bottom: 2rem;
@@ -327,8 +322,8 @@ body {
 
   .img-stars-bottom-desktop {
     width: 100%;
-    margin-top: 0rem;
-    height: 30rem;
+    position: fixed;
+    bottom: 0px;
   }
 
   .img-stars-bottom-mobile {
@@ -346,8 +341,8 @@ body {
   }
 
   .h1-votingguide {
-    color: #344F65;
-    font-family: 'Ethnocentric Rg';
+    color: #344f65;
+    font-family: "Ethnocentric Rg";
     margin-bottom: 2rem;
     font-size: 45px;
     margin-top: 4rem;
@@ -356,7 +351,7 @@ body {
 
   .p-votingguide {
     color: black;
-    font-family: 'Video';
+    font-family: "Video";
     font-style: normal;
     font-weight: 400;
     font-size: 33px;
@@ -375,7 +370,7 @@ body {
   .button-getstarted {
     color: white;
     background-color: black;
-    font-family: 'Video';
+    font-family: "Video";
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
@@ -397,8 +392,8 @@ body {
     margin-top: 6rem;
   }
 
-  .button-agree {
-    background-color: #17BA31;
+  .buttonagree {
+    background-color: #17ba31;
     border: none;
     border-radius: 50%;
     display: flex;
@@ -418,7 +413,7 @@ body {
   }
 
   .button-disagree {
-    background-color: #BA1717;
+    background-color: #ba1717;
     border: none;
     border-radius: 50%;
     display: flex;
@@ -436,14 +431,14 @@ body {
   }
 
   .p-voting-text {
-    font-family: 'Video';
+    font-family: "Video";
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
   }
 
   .p-voting-text2 {
-    font-family: 'Video';
+    font-family: "Video";
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -451,7 +446,7 @@ body {
   }
 
   .p-voting-text3 {
-    font-family: 'Video';
+    font-family: "Video";
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -499,7 +494,7 @@ body {
 
   .p-votingguide-d {
     color: black;
-    font-family: 'Video';
+    font-family: "Video";
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
