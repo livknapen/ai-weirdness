@@ -8,7 +8,7 @@
     <img class="stars-bg-top" src="/img/stars.svg" alt="Stars" />
 
     <!-- Header text section -->
-    <div class="header-text">
+    <div class="header-text-first-quest">
         <h3>AI image vs Human image</h3>
         <p>Which side do you support.</p>
     </div>
@@ -57,7 +57,7 @@
   }
 
   /* Header text styling */
-  .header-text {
+  .header-text-first-quest {
     text-align: center;
     margin: 0vw 10vw;
   }
