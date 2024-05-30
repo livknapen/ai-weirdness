@@ -12,37 +12,14 @@
     </div>
 
     <!-- Quest box -->
-    <div class="box" style="height: 313px; width: 335px">
-        <h3>AI image vs Human image</h3><br>
-        <hr class="line1"><br>
-        <p>In this quest you must pick between two images. Choose the image you think your president supports.</p><br>
-        <p class="points">+1000 points</p><br>
-        <NuxtLink to="/first-quest"><button class="button-main">Start Quest</button></NuxtLink>
-    </div>
-    <div class="box" style="height: 313px; width: 335px">
-        <h3>AI image vs Human image</h3><br>
-        <hr class="line1"><br> 
-        <p>In this quest you must pick between two images. Choose the image you think your president supports.</p><br>
-        <p class="points">+1000 points</p><br>
-        <NuxtLink to="/second-quest"><button class="button-main">Start Quest</button></NuxtLink>
-    </div>
-    <div class="box" style="height: 313px; width: 335px">
-        <h3>AI image vs Human image</h3><br>
-        <hr class="line1"><br>
-        <p>In this quest you must pick between two images. Choose the image you think your president supports.</p><br>
-        <p class="points">+1000 points</p><br>
-        <NuxtLink to="/third-quest"><button class="button-main">Start Quest</button></NuxtLink>
-    </div>
+
 
     <!-- Slideshow wrapper -->
     <div id="slideshow-wrap">
         <!-- Radio buttons for slideshow controls -->
         <input type="radio" id="button-1" name="controls" checked="checked" />
-        <label for="button-1"></label>
         <input type="radio" id="button-2" name="controls" />
-        <label for="button-2"></label>
         <input type="radio" id="button-3" name="controls" />
-        <label for="button-3"></label>
 
         <!-- Slideshow navigation arrows -->
         <label for="button-1" class="arrows" id="arrow-1">></label>
@@ -53,12 +30,15 @@
         <div id="slideshow-inner">
             <ul>
                 <li id="slide1">
+                    <box-1/>
                     <img src="/img/quest1.svg" alt="Quests" />
                 </li>
                 <li id="slide2">
+                    <box-2/>
                     <img src="/img/quest2.svg" alt="Quests"/>
                 </li>
                 <li id="slide3">
+                    <box-3/>
                     <img src="/img/quest3.svg" alt="Quests"/>
                 </li>
             </ul>
@@ -180,8 +160,8 @@
     /* Slideshow wrapper styling */
     #slideshow-wrap {
         display: block;
-        height: 150px;
-        max-width: 275px;
+        height: 550px;
+        max-width: 380px;
         margin: auto;
         margin-top: 50px;
         position: relative;
@@ -224,7 +204,7 @@
         height: 100%;
         margin-top: -90px;
         scale: 1.65;
-        margin-left: -35px;
+        margin-left: 15px;
     }
 
     /* Hide radio buttons for slideshow controls */
@@ -271,13 +251,10 @@
         font-size: 75pt;
         color: white;
         position: absolute;
-        margin-top: -25px;
-        top: 50%;
+        top: 76%;
         display: none;
         cursor: pointer;
-        z-index: 1
-
-;
+        z-index: 1;
         background-color: transparent;
         -webkit-transition: opacity .2s;
         -moz-transition: opacity .2s;
@@ -297,18 +274,14 @@
 
     /* Display the appropriate arrows based on active radio button */
     input[type=radio]#button-1:checked ~ .arrows#arrow-2,
-    input[type=radio]#button-2:checked ~ .arrows#arrow-3,
-    input[type=radio]#button-3:checked ~ .arrows#arrow-4,
-    input[type=radio]#button-4:checked ~ .arrows#arrow-5 {
-        right: -55px;
+    input[type=radio]#button-2:checked ~ .arrows#arrow-3 {
+        right: -6px;
         display: block;
     }
 
     /* Show left arrows and flip them horizontally */
     input[type=radio]#button-2:checked ~ .arrows#arrow-1,
-    input[type=radio]#button-3:checked ~ .arrows#arrow-2,
-    input[type=radio]#button-4:checked ~ .arrows#arrow-3,
-    input[type=radio]#button-5:checked ~ .arrows#arrow-4 {
+    input[type=radio]#button-3:checked ~ .arrows#arrow-2 {
         left: -55px;
         display: block;
         -webkit-transform: scaleX(-1);
@@ -320,10 +293,10 @@
 
     /* Adjust left margin for specific slides */
     input[type=radio]#button-2:checked ~ .arrows#arrow-1 {
-        left: -19px;
+        left: 31px;
     }
 
     input[type=radio]#button-3:checked ~ .arrows#arrow-2 {
-        left: -37px;
+        left: 13px;
     }
 </style>
