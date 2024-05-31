@@ -100,8 +100,8 @@ export default {
             currentQuestion: 0,
             result: null,
             presidents: {
-                presidenthuman: ['agree', 'agree', 'agree', 'agree', 'agree', 'agree', 'agree', 'agree', 'agree', 'agree'],
-                presidentai: ['disagree', 'disagree', 'disagree', 'disagree', 'disagree', 'disagree', 'disagree', 'disagree', 'disagree', 'disagree']
+                presidenthuman: ['disagree', 'disagree', 'disagree', 'agree', 'disagree', 'disagree', 'disagree', 'disagree', 'agree', 'disagree'],
+                presidentai: ['agree', 'agree', 'agree', 'disagree', 'agree', 'agree', 'agree', 'agree', 'disagree', 'agree']
             },
             progress: 0
         };
