@@ -129,9 +129,9 @@ export default {
             });
 
             if (scores.presidenthuman > scores.presidentai) {
-                this.result = { image: "/assets/president-human.jpg", text: "Based on the answers you entered in the voting guide, President Human fits your statements." };
+                this.result = { image: "/assets/president-human.png", text: "Based on the answers you entered in the voting guide, President Human fits your statements." };
             } else if (scores.presidentai > scores.presidenthuman) {
-                this.result = { image: "/assets/president-ai.jpg", text: "Based on the answers you entered in the voting guide, President AI fits your statements." };
+                this.result = { image: "/assets/president-ai.png", text: "Based on the answers you entered in the voting guide, President AI fits your statements." };
             } else {
                 this.result = { image: "/assets/both-presidents.png", text: "You align equally with both presidents!" };
             }
