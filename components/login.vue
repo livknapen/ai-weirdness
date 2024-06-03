@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form action="#" class="login-form">
+    <form action="/home" class="login-form" method="POST">
       <input name="username" type="text" placeholder="username" required />
       <input name="password" type="password" placeholder="password" required />
       <input type="submit" value="Sign in" />

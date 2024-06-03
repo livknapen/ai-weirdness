@@ -1,60 +1,101 @@
 <template>
-  <link href="https://fonts.googleapis.com/css?family=Alata" rel="stylesheet" />
-  <link href="https://fonts.cdnfonts.com/css/ethnocentric" rel="stylesheet" />
-  <link rel="stylesheet" href="https://use.typekit.net/clw2vbx.css" />
-  <div>
-    <header>
-      <div class="div-header-mobile">
-        <h1 class="h1-head">
-          voting <br />
-          guide
-        </h1>
-        <h2 class="h2-head">[ MENU ]</h2>
-      </div>
-      <div class="div-header-desktop">
-        <h1 class="h1-head">voting guide</h1>
-        <h2 class="h2-head">Home</h2>
-        <h2 class="h2-head">Quests</h2>
-        <h2 class="h2-head">Profile</h2>
-        <h2 class="h2-head" style="color: #9cf3ff">Voting Guide</h2>
-      </div>
-    </header>
-    <img class="img-stars-top-mobile" src="/assets/stars-top.png" />
-    <img class="img-stars-top-desktop" src="/assets/stars-top-desktop.png" />
-    <div class="div-maincontainer">
-      <div class="white-box">
-        <h1 class="h1-votingguide">{{ pageTitle }}</h1>
-        <p class="p-votingguide">
-          With this voting guide, you’ll ultimately get a president who best
-          suits your positions.
-        </p>
-        <div class="div-button">
-          <NuxtLink to="/voting"
-            ><button class="button-getstarted">Get started</button></NuxtLink
-          >
-        </div>
-      </div>
+  <div class="login-container">
+    <img class="top-image" src="/assets/images/login-top-mobile.png" alt="" />
+    <h2>Welcome back!</h2>
+    <div class="login-form-container">
+      <!-- <div class="login-form-flex">
+        <div class="login-form-slant-left"></div>
+        <div class="login-form-slant-right"></div>
+      </div> -->
+      <Login />
     </div>
-    <div class="div-stars-bottom">
-      <img class="img-stars-bottom-mobile" src="/assets/stars-bottom.png" />
-      <img
-        class="img-stars-bottom-desktop"
-        src="/assets/stars-bottom-desktop.png"
-      />
-    </div>
+
+    <img class="top-image" src="/assets/images/login-top-mobile.png" alt="" />
+    <img class="bottom-image" src="/assets/images/login-bottom.png" alt="" />
   </div>
 </template>
 
-<script>
-import WhiteBox from "@/components/WhiteBox.vue"; // Import the WhiteBox component
-export default {
-  components: {
-    WhiteBox, // Register the WhiteBoxe component
-  },
-  data() {
-    return {
-      pageTitle: "Voting guide", // Set the pageTitle data property so you can import it in the HTML. It's basically a variable
-    };
-  },
-};
-</script>
+<script onload></script>
+
+<style>
+@import url("https://fonts.cdnfonts.com/css/ethnocentric");
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    rgba(7, 26, 43, 1) 0%,
+    rgba(6, 25, 41, 1) 100%
+  );
+  background-repeat: no-repeat;
+  height: 100dvh;
+}
+#__nuxt {
+  padding: 0 35px;
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+
+  .top-image {
+    position: absolute;
+    top: 0;
+    margin-top: -50px;
+    width: 100%;
+    z-index: -100;
+  }
+  .bottom-image {
+    position: absolute;
+    bottom: 0;
+    z-index: -100;
+    width: 100%;
+    max-width: 700px;
+  }
+}
+h2 {
+  color: white;
+  text-align: center;
+  font-size: 46px;
+  text-transform: uppercase;
+  /* max-width: 430px; */
+  width: 100%;
+
+  font-family: ethnocentric rg, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+
+.login-form-container {
+  border: solid white;
+  border-width: 2px;
+  padding: 48px 48px 19px 48px;
+  border-radius: 15px;
+  background: radial-gradient(#395b77, #263a4b);
+}
+/* .login-form-flex {
+  position: relative;
+}
+.login-form-slant-left {
+  position: absolute;
+  height: 132px;
+  width: 8px;
+  top: 25px;
+  left: 0;
+  margin-left: -48px;
+  background-color: white;
+}
+.login-form-slant-right {
+  position: absolute;
+  height: 132px;
+  width: 8px;
+  top: 25px;
+  right: 0;
+  margin-right: -48px;
+  background-color: white;
+} */
+</style>
