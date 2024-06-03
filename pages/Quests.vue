@@ -5,14 +5,19 @@
     <!-- Top background stars image -->
     <img class="stars-bg-top" src="/img/stars.svg" alt="Stars" />
 
+    <MobileMenu
+      v-show="showMobileMenu"
+      @closeMobileMenu="showMobileMenu = false"
+      class="z-index-100"/>
+    <Navbar
+      @showMobileMenu="showMobileMenu = true"
+      style="position: relative; z-index: 100"/>
+
     <!-- Header text section -->
     <div class="header-text">
         <h3>Choose a quest!</h3>
         <p>You can select different tasks with the arrows.</p>
     </div>
-
-    <!-- Quest box -->
-
 
     <!-- Slideshow wrapper -->
     <div id="slideshow-wrap">
@@ -49,6 +54,16 @@
     <img class="stars-bg-bottom" src="/img/stars-bottom.svg" alt="Stars" />
 </template>
 
+<script>
+    export default {
+  data() {
+    return {
+      showMobileMenu: false,
+    };
+  },
+};
+</script>
+
 <style>
     @import url("https://fonts.cdnfonts.com/css/ethnocentric");
 
@@ -62,9 +77,12 @@
         font-weight: 350;
         background-repeat: repeat;
     }
-  
+
+    @media only screen and (max-width: 768px) {
+
     /* Top and bottom stars background positioning */
     .stars-bg-top {
+        position: absolute;
         margin-top: -50px;
     }
 
@@ -298,5 +316,13 @@
 
     input[type=radio]#button-3:checked ~ .arrows#arrow-2 {
         left: 13px;
+    }}
+
+@media only screen and (min-width: 769px) {
+    .stars-bg-top {
+        position: absolute;
+        width: 100%;
+        margin-top: -250px;
+    }
     }
 </style>

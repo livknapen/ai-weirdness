@@ -4,7 +4,7 @@
       <h3>AI image vs Human image</h3><br>
       <hr class="line1"><br> 
       <p>In this quest you must pick between two images. Choose the image you think your president supports.</p><br>
-      <p class="points">+1500 points</p><br>
+      <p class="points">+2000 points</p><br>
       <NuxtLink to="/third-quest"><button class="button-main">Start Quest</button></NuxtLink>
   </div>
 </div>

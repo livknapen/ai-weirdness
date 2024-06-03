@@ -5,20 +5,20 @@
 
   <div>
     <!-- Top background stars image -->
-    <img class="stars-bg-top" src="/img/stars.svg" alt="Stars" />
+    <img class="stars-bg-top-quests" src="/img/stars.svg" alt="Stars" />
 
     <!-- Header text section -->
-    <div class="header-text-first-quest">
+    <div class="header-text-quest">
         <h3>AI image vs Human image</h3>
         <p>Which side do you support.</p>
     </div>
 
-    <div class="box-first-quest" style="height: 350px; width: 350px">
+    <div class="box-quest" style="height: 350px; width: 350px">
       <img src="/img/first-quest.svg">
     </div>
 
-    <NuxtLink to="/Quests"><button class="button-main-first-quest">AI</button></NuxtLink>
-    <NuxtLink to="/Quests"><button class="button-main-first-quest">Human</button></NuxtLink>
+    <NuxtLink to="/Quests"><button class="button-main-quest">AI</button></NuxtLink>
+    <NuxtLink to="/Quests"><button class="button-main-quest">Human</button></NuxtLink>
 
   
     <!-- Bottom background stars image -->
@@ -43,7 +43,7 @@
   }
 
   /* Top and bottom stars background positioning */
-  .stars-bg-top {
+  .stars-bg-top-quests {
     margin-top: -50px;
   }
 
@@ -57,7 +57,7 @@
   }
 
   /* Header text styling */
-  .header-text-first-quest {
+  .header-text-quest {
     text-align: center;
     margin: 0vw 10vw;
   }
@@ -74,7 +74,7 @@
   }
 
   /* Quest box styling */
-  .box-first-quest {
+  .box-quest {
     position: relative;
     margin: 35px 0 0 40px;
     border: solid;
@@ -86,7 +86,7 @@
   }
 
   /* Box pseudo-elements for decorative borders */
-  .box-first-quest::before, .box-first-quest::after {
+  .box-quest::before, .box-quest::after {
     content: "";
     position: absolute;
     top: 0;
@@ -95,12 +95,12 @@
     background-color: white;
   }
 
-  .box-first-quest::before {
+  .box-quest::before {
     left: 0;
     clip-path: polygon(0 10%, 100% 30%, 100% 70%, 0 90%);
   }
 
-  .box-first-quest::after {
+  .box-quest::after {
     right: 0;
     clip-path: polygon(100% 10%, 0 30%, 0 70%, 100% 90%);
   }
@@ -117,7 +117,7 @@
   }
 
   /* Start quest button styling */
-  .button-main-first-quest {
+  .button-main-quest {
     background-color: black;
     color: white;
     height: 70px;

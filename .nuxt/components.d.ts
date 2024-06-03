@@ -1,6 +1,8 @@
 
 interface _GlobalComponents {
-      'Box1': typeof import("../components/box-1.vue")['default']
+      'MobileMenu': typeof import("../components/MobileMenu.vue")['default']
+    'Navbar': typeof import("../components/Navbar.vue")['default']
+    'Box1': typeof import("../components/box-1.vue")['default']
     'Box2': typeof import("../components/box-2.vue")['default']
     'Box3': typeof import("../components/box-3.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
@@ -24,7 +26,9 @@ interface _GlobalComponents {
     'Head': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Head']
     'Html': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
-      'LazyBox1': typeof import("../components/box-1.vue")['default']
+      'LazyMobileMenu': typeof import("../components/MobileMenu.vue")['default']
+    'LazyNavbar': typeof import("../components/Navbar.vue")['default']
+    'LazyBox1': typeof import("../components/box-1.vue")['default']
     'LazyBox2': typeof import("../components/box-2.vue")['default']
     'LazyBox3': typeof import("../components/box-3.vue")['default']
     'LazyNuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
@@ -62,6 +66,8 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
+export const MobileMenu: typeof import("../components/MobileMenu.vue")['default']
+export const Navbar: typeof import("../components/Navbar.vue")['default']
 export const Box1: typeof import("../components/box-1.vue")['default']
 export const Box2: typeof import("../components/box-2.vue")['default']
 export const Box3: typeof import("../components/box-3.vue")['default']
@@ -86,6 +92,8 @@ export const Style: typeof import("../node_modules/nuxt/dist/head/runtime/compon
 export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Head']
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
+export const LazyMobileMenu: typeof import("../components/MobileMenu.vue")['default']
+export const LazyNavbar: typeof import("../components/Navbar.vue")['default']
 export const LazyBox1: typeof import("../components/box-1.vue")['default']
 export const LazyBox2: typeof import("../components/box-2.vue")['default']
 export const LazyBox3: typeof import("../components/box-3.vue")['default']
