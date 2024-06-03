@@ -1,93 +1,93 @@
 <template>
-	<div>
-		<img class="mobile-nav-stars-top" src="/assests/stars-top.png" alt="" />
-		<button class="mobile-close-button" @click="closeMobileMenu">
-			[ CLOSE ]
-		</button>
-		<div class="box mobile-nav">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<hr />
-				<li><a href="#">Quests</a></li>
-				<hr />
-				<li><a href="#">Voting Guide</a></li>
-				<hr />
-				<li><a href="#">Profile</a></li>
-				<hr />
-			</ul>
-		</div>
-		<img
-			class="mobile-nav-stars-bottom"
-			src="/assests/stars-bottom.png"
-			alt=""
-		/>
-	</div>
+  <div>
+    <img class="mobile-nav-stars-top" src="/assests/stars-top.png" alt="" />
+    <button class="mobile-close-button" @click="closeMobileMenu">
+      [ CLOSE ]
+    </button>
+    <div class="box mobile-nav">
+      <ul>
+        <li><NuxtLink to="/">Home</NuxtLink></li>
+        <hr />
+        <li><NuxtLink to="/quests">Quests</NuxtLink></li>
+        <hr />
+        <li><NuxtLink to="#">Voting Guide</NuxtLink></li>
+        <hr />
+        <li><NuxtLink to="/profile">Profile</NuxtLink></li>
+        <hr />
+      </ul>
+    </div>
+    <img
+      class="mobile-nav-stars-bottom"
+      src="/assests/stars-bottom.png"
+      alt=""
+    />
+  </div>
 </template>
 
 <script>
 export default {
-	methods: {
-		closeMobileMenu() {
-			this.$emit("closeMobileMenu");
-		},
-	},
+  methods: {
+    closeMobileMenu() {
+      this.$emit("closeMobileMenu");
+    },
+  },
 };
 </script>
 
 <style>
 .mobile-close-button {
-	position: absolute;
-	top: 3rlh;
-	right: 3rlh;
-	z-index: 2;
+  position: absolute;
+  top: 3rlh;
+  right: 3rlh;
+  z-index: 2;
 
-	border: none;
-	background-color: transparent;
-	font-size: 32px;
+  border: none;
+  background-color: transparent;
+  font-size: 32px;
 
-	color: white;
+  color: white;
 }
 .mobile-nav-stars-top {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 
-	z-index: 1;
+  z-index: 1;
 }
 .mobile-nav-stars-bottom {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 
-	z-index: 1;
+  z-index: 1;
 }
 .mobile-nav {
-	height: 100svh;
-	max-width: 100dvw;
+  height: 100svh;
+  max-width: 100dvw;
 
-	box-sizing: border-box;
+  box-sizing: border-box;
 
-	padding: 3rlh;
+  padding: 3rlh;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .mobile-nav ul {
-	list-style-type: none;
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .mobile-nav ul li {
-	text-transform: uppercase;
-	font-weight: 900;
-	font-family: ethnocentric;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: ethnocentric;
 }
 .mobile-nav ul li a {
-	text-decoration: none;
-	color: white;
+  text-decoration: none;
+  color: white;
 }
 </style>
