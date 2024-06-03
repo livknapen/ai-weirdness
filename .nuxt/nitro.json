@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "date": "2024-05-29T08:55:52.867Z",
+=======
+  "date": "2024-05-29T12:15:29.788Z",
+>>>>>>> VotingPage
   "preset": "nitro-dev",
   "framework": {
     "name": "nuxt",
@@ -9,9 +13,15 @@
     "nitro": "2.9.6"
   },
   "dev": {
+<<<<<<< HEAD
     "pid": 5856,
     "workerAddress": {
       "socketPath": "\\\\.\\pipe\\nitro\\worker-5856-1.sock"
+=======
+    "pid": 22764,
+    "workerAddress": {
+      "socketPath": "\\\\.\\pipe\\nitro\\worker-22764-1.sock"
+>>>>>>> VotingPage
     }
   }
 }
