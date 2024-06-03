@@ -1,8 +1,21 @@
+.background {
+    background-color: #071A2B;
+    height: 100vh
+}
+
+.container {
+    display: flex;
+    margin: 8em 4em 4em;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .header-text {
     font-family: ethnocentric, serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 28px;
+    color: white;
 }
 
 .body-text {
@@ -10,18 +23,43 @@
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
+    color: white;
 }
 
 .box {
-    background-color: radial-gradient(#395B77, #263A4B);
+    position: relative;
+    background: radial-gradient(circle at center, #395B77 0%, #263A4B 100%);
+    /* background-color: black; */
     border: solid;
     border-color: white;
     border-width: 2px;
     border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+}
+
+.box::before, .box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: white;
+}
+
+.box::before {
+    left: 0;
+    clip-path: polygon(0 10%, 100% 30%, 100% 70%, 0 90%);
+}
+
+.box::after {
+    right: 0;
+    clip-path: polygon(100% 10%, 0 30%, 0 70%, 100% 90%);
 }
 
 .button-main {
     background-color: black;
+    color: white;
     height: 50px;
     width: 250px;
     border-radius: 10px;
@@ -29,5 +67,4 @@
     font-style: normal;
     font-weight: 800;
     font-size: 24px;
-
 }
