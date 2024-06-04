@@ -48,6 +48,8 @@
   }
 
   .stars-bg-bottom {
+    margin-top: -85px;
+    z-index: -1;
     position: relative;
   }
 
