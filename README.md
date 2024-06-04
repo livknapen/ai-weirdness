@@ -7,7 +7,9 @@ this project is about presidential elections on a new colony on the moon. To det
 ## Tables of content
 
 1[Usage](#1-usage)
+
 2[Use](#2-setup)
+
 3[Authors](#3-authors)
 
 ## 1. Usage
