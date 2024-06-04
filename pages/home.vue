@@ -21,9 +21,9 @@
 		/>
 
 		<div class="storyline">
-			<video controls>
+			<video controls autoplay>
 				<source
-					href="https://www.youtube.com/watch?v=RyShn_435wM"
+					href="http://localhost:3000/_nuxt/assets/videos/AI-Weirdness-Trailer.mp4"
 					type="video/mp4"
 				/>
 			</video>
