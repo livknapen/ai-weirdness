@@ -5,8 +5,8 @@
 
 	<div class="background">
 		<img
-			class="mobile-nav-stars-top"
-			src="/assets/images/stars-top.png"
+			style="position: absolute; top: 0; left: 0; width: 100%; z-index: -101"
+			src="/assets/images/stars-top-desktop.png"
 			alt=""
 		/>
 		<MobileMenu

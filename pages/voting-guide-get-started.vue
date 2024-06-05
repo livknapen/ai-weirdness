@@ -2,6 +2,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Alata" rel="stylesheet" />
 	<link href="https://fonts.cdnfonts.com/css/ethnocentric" rel="stylesheet" />
 	<link rel="stylesheet" href="https://use.typekit.net/clw2vbx.css" />
+	<img
+		src="/assets/images/stars-top-desktop.png"
+		alt="Stars bottom"
+		style="position: absolute; top: 0; left: 0; width: 100%; z-index: -101"
+	/>
 	<div>
 		<MobileMenu
 			v-show="showMobileMenu"
@@ -14,11 +19,6 @@
 			style="position: relative; z-index: 100"
 		/>
 
-		<img class="img-stars-top-mobile" src="/assets/images/stars-top.png" />
-		<img
-			class="img-stars-top-desktop"
-			src="/assets/images/stars-top-desktop.png"
-		/>
 		<div class="div-maincontainer">
 			<div class="white-box">
 				<h1 class="h1-votingguide">{{ pageTitle }}</h1>
@@ -33,16 +33,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="div-stars-bottom">
-			<img
-				class="img-stars-bottom-mobile"
-				src="/assets/images/stars-bottom.png"
-			/>
-			<img
-				class="img-stars-bottom-desktop"
-				src="/assets/images/stars-bottom-desktop.png"
-			/>
-		</div>
+		<img
+			src="/assets/images/stars-bottom-desktop.png"
+			alt="Stars bottom"
+			style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: -101"
+		/>
 	</div>
 </template>
 

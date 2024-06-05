@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div v-if="error">{{ error }}</div>
+		<div v-if="error">0</div>
 		<div v-else-if="loading">Loading...</div>
 		<div v-else>{{ score }}</div>
 	</div>

@@ -1,5 +1,14 @@
 <template>
+	<link href="https://fonts.googleapis.com/css?family=Alata" rel="stylesheet" />
+	<link href="https://fonts.cdnfonts.com/css/ethnocentric" rel="stylesheet" />
+	<link rel="stylesheet" href="https://use.typekit.net/clw2vbx.css" />
+
 	<div class="background">
+		<img
+			class="mobile-nav-stars-top"
+			src="/assets/images/stars-top-desktop.png"
+			alt=""
+		/>
 		<MobileMenu
 			v-show="showMobileMenu"
 			@closeMobileMenu="showMobileMenu = false"
@@ -73,6 +82,11 @@
 				</div>
 			</div>
 		</div>
+		<img
+			src="/assets/images/stars-bottom-desktop.png"
+			alt="Stars bottom"
+			style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: -101"
+		/>
 	</div>
 </template>
 
@@ -101,6 +115,19 @@ export default {
 	margin: 0;
 
 	overflow: hidden;
+}
+
+.background {
+	z-index: 100;
+	position: relative;
+	height: 100dvh;
+}
+
+.mobile-nav-stars-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -100;
 }
 
 @media only screen and (max-width: 768px) {

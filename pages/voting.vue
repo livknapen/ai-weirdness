@@ -11,25 +11,19 @@
 		<Navbar @showMobileMenu="showMobileMenu = true" pageTitle="Voting" />
 		<div class="textBox">
 			<img
-				src="/assets/images/stars-top.png"
+				src="/assets/images/stars-top-desktop.png"
 				alt="Stars top"
 				style="position: absolute; top: 0; left: 0; width: 100%; z-index: -101"
 			/>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus
-				viverra eros nec molestie. Quisque aliquam, ligula non dignissim
-				dignissim, urna urna gravida dui, venenatis ultrices quam mauris in
-				felis. Nulla neque nunc, porttitor nec tristique id, malesuada nec leo.
-				Maecenas et arcu dui. Mauris eleifend convallis condimentum.
-				Pellentesque facilisis massa non pulvinar dignissim. Praesent augue est,
-				elementum vitae mi quis, pretium consequat mi. Quisque fringilla nulla
-				sit amet leo convallis, in auctor lacus finibus. Phasellus vitae
-				convallis odio. Maecenas sed sagittis mi, nec tincidunt leo. Curabitur
-				bibendum at metus quis cursus
+				Here you can vote for a president. If you are not sure yet, fill in the
+				voting guide first. Once you have voted, you can get points for this
+				president on the quest page. At the end of the election, a final event
+				will be held at the Pixel Playground in R10 Fontys Eindhoven.
 			</p>
 			<button>Voting Guide</button>
 		</div>
-		<div class="box" style="height: 310px; width: 400px">
+		<div class="box" style="height: 310px; width: 400px; margin: 0 auto">
 			<div id="presidentContainer">
 				<div class="presidentItem">
 					<h2>president human</h2>
@@ -53,7 +47,7 @@
 		</div>
 	</div>
 	<img
-		src="/assets/images/stars-bottom.png"
+		src="/assets/images/stars-bottom-desktop.png"
 		alt="Stars bottom"
 		style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: -101"
 	/>
@@ -86,6 +80,9 @@ button {
 
 	margin: 0 auto;
 	display: block;
+
+	font-family: "video";
+	font-style: normal;
 }
 
 /* Top Text */
@@ -106,6 +103,7 @@ button {
 	font-family: "video";
 	font-style: normal;
 	font-weight: 350;
+	margin-bottom: 1rem;
 }
 
 /* President Selection */
