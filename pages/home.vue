@@ -21,11 +21,8 @@
 		/>
 
 		<div class="storyline">
-			<video controls autoplay>
-				<source
-					href="http://localhost:3000/_nuxt/assets/videos/AI-Weirdness-Trailer.mp4"
-					type="video/mp4"
-				/>
+			<video controls="" autoplay name="media">
+				<source src="/assets/videos/AI-Weirdness-Trailer.mp4" />
 			</video>
 			<h2>Storyline</h2>
 			<p>
