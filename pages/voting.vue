@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="https://use.typekit.net/clw2vbx.css" />
   <div>
     <header>
+      <!-- Header -->
       <div class="div-header-mobile">
         <h1 class="h1-head">
           voting <br />
@@ -19,6 +20,7 @@
         <h2 class="h2-head" style="color: #9cf3ff">Voting Guide</h2>
       </div>
     </header>
+    <!-- Stars iamge top -->
     <img class="img-stars-top-mobile" src="/assets/stars-top.png" />
     <img class="img-stars-top-desktop" src="/assets/stars-top-desktop.png" />
     <div class="div-maincontainer">
@@ -26,6 +28,7 @@
         <optionbuttons />
       </div>
     </div>
+    <!-- Stars image bottom -->
     <div class="div-stars-bottom">
       <img class="img-stars-bottom-mobile" src="/assets/stars-bottom.png" />
       <img
@@ -37,6 +40,7 @@
 </template>
 
 <script>
+// Import the whitbox, progressbar and optionsbuttons
 import WhiteBox from "@/components/WhiteBox.vue";
 import ProgressBar from "@/components/progressbar.vue";
 import optionbuttons from "@/components/OptionButtons.vue";

@@ -1,9 +1,12 @@
 <template>
     <div>
+        <!-- Progressbar -->
         <ProgressBar :progress="progress" />
+        <!-- Questions -->
         <div v-if="currentQuestion < questions.length">
             <h1 class="h1-votingguide">{{ questions[currentQuestion].title }}</h1>
             <p class="p-votingguide">{{ questions[currentQuestion].text }}</p>
+            <!-- Votingbuttons -->
             <div class="div-votingbuttons">
                 <div class="optionbutton">
                     <button @click="answerQuestion('agree')" class="buttonagree">
@@ -57,15 +60,19 @@
                 </div>
             </div>
         </div>
+        <!-- Results of the votings -->
         <div v-else>
             <div v-if="result !== null">
                 <h1 class="h1-votingguide">Results</h1>
                 <div class="div-results">
+                    <!-- Images -->
                     <img class="img-pr-d" :src="result.image">
                     <img class="img-pr-p" :src="result.image">
+                    <!-- Text -->
                     <p class="p-votingguide-d">{{ result.text }}</p>
                     <p class="p-votingguide-p">{{ result.text }}</p>
                 </div>
+                <!-- Choose a side button -->
                 <div class="div-button-choose">
                     <NuxtLink to="/chooseside"><button class="button-choose-side">Choose a side</button></NuxtLink>
                 </div>
@@ -76,6 +83,7 @@
 
 
 <script>
+// Importing the progressbar
 import ProgressBar from './progressbar.vue';
 
 export default {
@@ -84,6 +92,7 @@ export default {
     },
     data() {
         return {
+            // Questions for the voting guide
             questions: [
                 { title: "Economy", text: "In this new economy, vehicles and transportation based on fossil fuels should no longer be allowed." },
                 { title: "Health Care", text: "Healthcare should be free for every individual who lives on the moon." },
@@ -99,6 +108,7 @@ export default {
             userAnswers: [],
             currentQuestion: 0,
             result: null,
+            // Opinions from the presidents
             presidents: {
                 presidenthuman: ['disagree', 'disagree', 'disagree', 'agree', 'disagree', 'disagree', 'disagree', 'disagree', 'agree', 'disagree'],
                 presidentai: ['agree', 'agree', 'agree', 'disagree', 'agree', 'agree', 'agree', 'agree', 'disagree', 'agree']
@@ -106,7 +116,9 @@ export default {
             progress: 0
         };
     },
-    methods: {
+    methods: 
+    // Will show the correct questions in order
+    {
         answerQuestion(answer) {
             this.userAnswers[this.currentQuestion] = answer;
             this.currentQuestion++;
@@ -116,6 +128,8 @@ export default {
                 this.calculateResult();
             }
         },
+
+        // Calculates the result from the input and compares to opinions of the presidents
         calculateResult() {
             const scores = { presidenthuman: 0, presidentai: 0 };
 
@@ -128,6 +142,7 @@ export default {
                 }
             });
 
+            // Shows the right image and text as result of the voting guide
             if (scores.presidenthuman > scores.presidentai) {
                 this.result = { image: "/assets/president-human.png", text: "Based on the answers you entered in the voting guide, President Human fits your statements." };
             } else if (scores.presidentai > scores.presidenthuman) {
@@ -136,6 +151,8 @@ export default {
                 this.result = { image: "/assets/both-presidents.png", text: "You align equally with both presidents!" };
             }
         },
+
+        // Updates the progressbar when buttons are clicked
         updateProgress() {
             this.progress = (this.currentQuestion / this.questions.length) * 100;
         }

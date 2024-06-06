@@ -6,6 +6,7 @@
 </template>
 
 <script>
+// Exports the progress numbers
 export default {
   props: {
     progress: {

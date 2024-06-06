@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="https://use.typekit.net/clw2vbx.css" />
   <div>
     <header>
+      <!-- Header -->
       <div class="div-header-mobile">
         <h1 class="h1-head">
           voting <br />
@@ -19,22 +20,25 @@
         <h2 class="h2-head" style="color: #9cf3ff">Voting Guide</h2>
       </div>
     </header>
+    <!-- Stars image top -->
     <img class="img-stars-top-mobile" src="/assets/stars-top.png" />
     <img class="img-stars-top-desktop" src="/assets/stars-top-desktop.png" />
     <div class="div-maincontainer">
       <div class="white-box">
+        <!-- Import the pagetitle variable -->
         <h1 class="h1-votingguide">{{ pageTitle }}</h1>
         <p class="p-votingguide">
           With this voting guide, you’ll ultimately get a president who best
           suits your positions.
         </p>
+        <!-- Button to go to the voting page -->
         <div class="div-button">
           <NuxtLink to="/voting"
-            ><button class="button-getstarted">Get started</button></NuxtLink
-          >
+            ><button class="button-getstarted">Get started</button></NuxtLink>
         </div>
       </div>
     </div>
+    <!-- Stars image bottom -->
     <div class="div-stars-bottom">
       <img class="img-stars-bottom-mobile" src="/assets/stars-bottom.png" />
       <img
@@ -46,14 +50,16 @@
 </template>
 
 <script>
-import WhiteBox from "@/components/WhiteBox.vue"; // Import the WhiteBox component
+// Import the whitebox
+import WhiteBox from "@/components/WhiteBox.vue";
 export default {
   components: {
-    WhiteBox, // Register the WhiteBoxe component
+    WhiteBox, 
   },
   data() {
     return {
-      pageTitle: "Voting guide", // Set the pageTitle data property so you can import it in the HTML. It's basically a variable
+      // Setting the variable for the pagetitle
+      pageTitle: "Voting guide",
     };
   },
 };
