@@ -21,7 +21,7 @@
 		/>
 
 		<div class="storyline">
-			<video controls="" autoplay name="media">
+			<video controls="" name="media">
 				<source src="/assets/videos/AI-Weirdness-Trailer.mp4" />
 			</video>
 			<h2>Storyline</h2>

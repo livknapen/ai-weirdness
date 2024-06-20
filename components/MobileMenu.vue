@@ -1,3 +1,4 @@
+<!-- This will be displayed when someone presses the "[ MENU ]" button in the mobile navigation -->
 <template>
 	<div>
 		<img
@@ -6,6 +7,7 @@
 			alt=""
 		/>
 		<button class="mobile-close-button" @click="closeMobileMenu">
+			<!-- Close button that fires the closeMobileMenu method on click -->
 			[ CLOSE ]
 		</button>
 		<div class="box mobile-nav">
@@ -27,18 +29,20 @@
 		/>
 	</div>
 </template>
+<!-- End of mobile element -->
 
 <script>
 export default {
 	methods: {
 		closeMobileMenu() {
-			this.$emit("closeMobileMenu");
+			this.$emit("closeMobileMenu"); // Emit the closeMobileMenu event
 		},
 	},
 };
 </script>
 
 <style>
+/* Global settings for both mobile and desktop */
 .mobile-close-button {
 	position: absolute;
 	top: 3rlh;
@@ -52,6 +56,8 @@ export default {
 	color: white;
 	width: fit-content;
 }
+
+/* Stars at the top of the page (mobile) */
 .mobile-nav-stars-top {
 	position: absolute;
 	top: 0;
@@ -60,6 +66,7 @@ export default {
 
 	z-index: 1;
 }
+/* Stars at the bottom of the page (mobile) */
 .mobile-nav-stars-bottom {
 	position: absolute;
 	bottom: 0;
@@ -68,6 +75,8 @@ export default {
 
 	z-index: -10;
 }
+
+/* Navigation styles */
 .mobile-nav {
 	height: 100svh;
 	max-width: 100dvw;

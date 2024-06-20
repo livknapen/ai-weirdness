@@ -28,27 +28,20 @@
 			</div>
 
 			<div class="profile-content-2">
-				<div class="profile-container">
-					<div class="box">
-						<div class="profile-grid">
-							<div>
-								<p class="profile-header">AI president</p>
-								<img
-									class="profile-ai-president"
-									src="/assets/images/ai-president.png"
-									alt=""
-								/>
-							</div>
-							<div>
-								<p class="profile-header">Human president</p>
-								<img
-									class="profile-human-president"
-									src="/assets/images/human-president.png"
-									alt=""
-								/>
-							</div>
+				<div class="box" style="height: 350px; width: 400px; margin: 0 auto">
+					<div id="presidentContainer">
+						<div class="presidentItem">
+							<h2 style="margin-bottom: 1rem">MAIchael</h2>
+							<p style="margin-bottom: 1rem">You've voted for MAIchael</p>
+							<img
+								src="/assets/images/Maichael.png"
+								alt="The AI President"
+								style="height: 200px; margin-bottom: 1rem"
+							/>
+							<!-- <div>
+								<button>AI</button>
+							</div> -->
 						</div>
-						<button class="profile-button">Choose a side</button>
 					</div>
 				</div>
 
@@ -59,14 +52,14 @@
 				<div class="profile-container">
 					<div class="profile-score">
 						<div class="profile-background">
-							<h3>69</h3>
+							<h3>0</h3>
 							<p>
 								Completed <br />
 								quests
 							</p>
 						</div>
 						<div class="profile-background">
-							<h3>#1</h3>
+							<h3>#</h3>
 							<p>Ranking</p>
 						</div>
 						<div class="profile-background">
@@ -82,11 +75,6 @@
 				</div>
 			</div>
 		</div>
-		<img
-			src="/assets/images/stars-bottom-desktop.png"
-			alt="Stars bottom"
-			style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: -101"
-		/>
 	</div>
 </template>
 
@@ -120,7 +108,7 @@ export default {
 .background {
 	z-index: 100;
 	position: relative;
-	height: 100dvh;
+	/* height: 100dvh; */
 }
 
 .mobile-nav-stars-top {

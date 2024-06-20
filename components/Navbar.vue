@@ -1,3 +1,4 @@
+<!-- This part of the component is rendered out on the screen when called. All visible header elements are in here -->
 <template>
 	<header>
 		<div class="div-header-mobile">
@@ -13,15 +14,16 @@
 		</div>
 	</header>
 </template>
+<!-- End of the visible component -->
 
 <script>
 export default {
 	props: {
-		pageTitle: String,
+		pageTitle: String, // The title of the page, passed in as a prop
 	},
 	methods: {
 		showMobileMenu() {
-			this.$emit("showMobileMenu");
+			this.$emit("showMobileMenu"); // Emit the showMobileMenu event
 		},
 	},
 };

@@ -52,16 +52,15 @@
 .profile-score {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 33px;
+	gap: 16px;
 }
 .profile-background {
 	background-color: #d9d9d9;
+	color: black;
 	max-height: 94px;
 	max-width: 94px;
 	height: calc(94px - 2rlh);
 	padding: 1rlh;
-
-	color: black;
 
 	border-radius: 100%;
 
@@ -73,6 +72,13 @@
 
 	font-family: "video";
 	font-style: normal;
+
+	h3 {
+		color: #071a2b;
+	}
+	p {
+		color: #071a2b;
+	}
 }
 .profile-stars-bottom {
 	position: relative;
@@ -94,10 +100,12 @@
 	.profile-ai-president {
 		height: 210px;
 		width: 131px;
+		border: 2px solid white;
 	}
 	.profile-human-president {
 		height: 210px;
 		width: 131px;
+		border: 2px solid white;
 	}
 }
 

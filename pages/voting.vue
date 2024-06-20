@@ -16,32 +16,53 @@
 				style="position: absolute; top: 0; left: 0; width: 100%; z-index: -101"
 			/>
 			<p>
-				Here you can vote for a president. If you are not sure yet, fill in the
-				voting guide first. Once you have voted, you can get points for this
-				president on the quest page. At the end of the election, a final event
-				will be held at the Pixel Playground in R10 Fontys Eindhoven.
+				Here you can vote for a president. If you are not sure yet, you can
+				refer to the voting guide to help you make a decision.
 			</p>
-			<button>Voting Guide</button>
+			<a href="/voting-guide-get-started"><button>Voting Guide</button></a>
 		</div>
-		<div class="box" style="height: 310px; width: 400px; margin: 0 auto">
+		<div
+			class="box"
+			style="height: 310px; width: 400px; margin: 0 auto"
+			v-if="testState"
+		>
 			<div id="presidentContainer">
 				<div class="presidentItem">
-					<h2>president human</h2>
+					<h2 style="margin-bottom: 1rem">Emily</h2>
 					<img
 						src="/assets/images/Emily.png "
 						alt="The Human President"
-						style="height: 200px"
+						style="height: 200px; margin-bottom: 1rem"
 					/>
-					<button>Human</button>
+					<button>Vote</button>
 				</div>
 				<div class="presidentItem">
-					<h2>president AI</h2>
+					<h2 style="margin-bottom: 1rem">MAIchael</h2>
 					<img
 						src="/assets/images/Maichael.png"
 						alt="The AI President"
-						style="height: 200px"
+						style="height: 200px; margin-bottom: 1rem"
 					/>
-					<button>AI</button>
+					<div>
+						<button @click="testState = !testState">Vote</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="box" style="height: 350px; width: 400px; margin: 0 auto" v-else>
+			<div id="presidentContainer">
+				<div class="presidentItem">
+					<h2 style="margin-bottom: 1rem">MAIchael</h2>
+					<p style="margin-bottom: 1rem">You've voted for MAIchael</p>
+					<img
+						src="/assets/images/Maichael.png"
+						alt="The AI President"
+						style="height: 200px; margin-bottom: 1rem"
+					/>
+					<div>
+						<button @click="testState = !testState">Undo vote</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -60,6 +81,7 @@ export default {
 		return {
 			pageTitle: "votingPage",
 			showMobileMenu: false,
+			testState: true,
 		};
 	},
 };
@@ -123,5 +145,8 @@ button {
 
 .presidentItem h2 {
 	margin-top: 10px;
+}
+.presidentItem img {
+	border: 2px solid white;
 }
 </style>
