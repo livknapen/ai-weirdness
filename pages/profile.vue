@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="https://use.typekit.net/clw2vbx.css" />
 
 	<div class="background">
+		<!-- These are the stars at the top of the page -->
 		<img
 			class="mobile-nav-stars-top"
 			src="/assets/images/stars-top-desktop.png"
@@ -13,26 +14,37 @@
 			v-show="showMobileMenu"
 			@closeMobileMenu="showMobileMenu = false"
 		/>
+		<!-- Mobile navigation menu with a few props. showMobileMenu will be set to false if close is pressed -->
 		<Navbar @showMobileMenu="showMobileMenu = true" pageTitle="Profile" />
+		<!-- Desktop navigation menu with a few props. pageTitle is the page you're on, showMobileMenu will be set to true if [MENU] is pressed  -->
 
+		<!-- Main content of the page -->
 		<div class="profile-content">
 			<div class="profile-content-1">
 				<div class="white-box">
 					<!-- <img src="/assets/images/profile.svg" alt="#" /> -->
 					<h2 class="profile-username">
+						<!-- Username component with userId as prop. Hardcoded for now but needs to be dynamic in the future. UserID for now is 66573909a0114b0f369f5c2e -->
 						<Username userId="66573909a0114b0f369f5c2e" />
 					</h2>
 				</div>
 
+				<!-- Standard devider class -->
 				<div class="profile-divider" style="margin-bottom: 30px"></div>
 			</div>
 
+			<!-- Box to show which president you've voted for.
+       Hardcoded for now, needs to be dynamic in the future. -->
 			<div class="profile-content-2">
 				<div class="box" style="height: 350px; width: 400px; margin: 0 auto">
 					<div id="presidentContainer">
 						<div class="presidentItem">
+							<!-- The "MAIchael" needs to be dynamic -->
+							<!-- Name of the president -->
 							<h2 style="margin-bottom: 1rem">MAIchael</h2>
+							<!-- Which president you've voted for. -->
 							<p style="margin-bottom: 1rem">You've voted for MAIchael</p>
+							<!-- Image of the president of choice -->
 							<img
 								src="/assets/images/Maichael.png"
 								alt="The AI President"
@@ -48,10 +60,12 @@
 				<div class="profile-divider" style="margin-bottom: 30px"></div>
 			</div>
 
+			<!-- 3 badges at the bottom. Hardcoded for now, needs to be dynamic -->
 			<div class="profile-content-3">
 				<div class="profile-container">
 					<div class="profile-score">
 						<div class="profile-background">
+							<!-- The amount of completed quests -->
 							<h3>0</h3>
 							<p>
 								Completed <br />
@@ -59,11 +73,13 @@
 							</p>
 						</div>
 						<div class="profile-background">
+							<!-- Your ranking, calculate this with the point -->
 							<h3>#</h3>
 							<p>Ranking</p>
 						</div>
 						<div class="profile-background">
 							<h3>
+								<!-- UserScore component (/components/UserScore.vue). userId prompt is hardcoded, needs to be dynamic -->
 								<UserScore userId="66573909a0114b0f369f5c2e" />
 							</h3>
 							<p>
@@ -79,6 +95,7 @@
 </template>
 
 <script>
+// Import the components and styles
 import "/assets/css/main.css"; // Import the main css
 import "/assets/css/profile.css"; // Import the profile css
 import Username from "/components/Username.vue";
@@ -87,9 +104,10 @@ import UserScore from "~/components/UserScore.vue";
 export default {
 	data() {
 		return {
-			showMobileMenu: false,
+			showMobileMenu: false, // Show mobile menu is false by default untill [MENU] is pressed
 		};
 	},
+	// The 2 components for username and userscore
 	components: {
 		Username,
 		UserScore,
@@ -98,6 +116,7 @@ export default {
 </script>
 
 <style>
+/* Styles */
 * {
 	padding: 0;
 	margin: 0;
@@ -118,6 +137,7 @@ export default {
 	z-index: -100;
 }
 
+/* Mobile only */
 @media only screen and (max-width: 768px) {
 	.div-header-mobile {
 		display: flex;
@@ -277,6 +297,7 @@ export default {
 	}
 }
 
+/* Desktop only */
 @media only screen and (min-width: 769px) {
 	.div-header-desktop {
 		display: flex;

@@ -21,6 +21,7 @@
 			</p>
 			<a href="/voting-guide-get-started"><button>Voting Guide</button></a>
 		</div>
+		<!-- Check if testState is true, if not skip this code -->
 		<div
 			class="box"
 			style="height: 310px; width: 400px; margin: 0 auto"
@@ -44,12 +45,14 @@
 						style="height: 200px; margin-bottom: 1rem"
 					/>
 					<div>
+						<!-- Change the testState to whatever the opposite of it's current value is (false or true) -->
 						<button @click="testState = !testState">Vote</button>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<!-- Check if testState is false, this will only show if the vote button for MAIchael is pressed -->
 		<div class="box" style="height: 350px; width: 400px; margin: 0 auto" v-else>
 			<div id="presidentContainer">
 				<div class="presidentItem">
@@ -61,6 +64,7 @@
 						style="height: 200px; margin-bottom: 1rem"
 					/>
 					<div>
+						<!-- Change the testState to whatever the opposite of it's current value is (false or true) -->
 						<button @click="testState = !testState">Undo vote</button>
 					</div>
 				</div>
@@ -79,9 +83,9 @@ import "/assets/css/main.css"; // Import the main css
 export default {
 	data() {
 		return {
-			pageTitle: "votingPage",
-			showMobileMenu: false,
-			testState: true,
+			pageTitle: "votingPage", // obsolete code, page title can be changed in the Navbar component props
+			showMobileMenu: false, // Set the mobile menu to false, changes to true if the [MENU] button is pressed
+			testState: true, // Set the testState to true, this will be used to toggle between the two voting options
 		};
 	},
 };

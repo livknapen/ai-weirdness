@@ -9,20 +9,24 @@
 			src="/assets/images/stars-top-desktop.png"
 			alt=""
 		/>
+		<!-- These are the stars at the top of the page -->
 		<MobileMenu
 			v-show="showMobileMenu"
 			@closeMobileMenu="showMobileMenu = false"
 			style="position: relative; z-index: 100"
 		/>
+		<!-- Mobile navigation menu with a few props. showMobileMenu will be set to false if close is pressed -->
 		<Navbar
 			pageTitle="Home"
 			@showMobileMenu="showMobileMenu = true"
 			style="position: relative; z-index: 100"
 		/>
+		<!-- Desktop navigation menu with a few props. pageTitle is the page you're on, showMobileMenu will be set to true if [MENU] is pressed  -->
 
 		<div class="storyline">
 			<video controls="" name="media">
 				<source src="/assets/videos/AI-Weirdness-Trailer.mp4" />
+				<!-- Video source. do not touch, will break if touched -->
 			</video>
 			<h2>Storyline</h2>
 			<p>
@@ -62,26 +66,26 @@
 				In the end one president gets elected, he/she builds the nation and will
 				be the main influence for society.
 			</p>
-
-			<div style="margin-top: 16px"></div>
 		</div>
 	</div>
 </template>
 
 <script>
+// Importing the components and styles
 import "/assets/css/main.css";
 import "/assets/css/home.css";
 
 export default {
 	data() {
 		return {
-			showMobileMenu: false,
+			showMobileMenu: false, // Show mobile menu is false by default untill [MENU] is pressed
 		};
 	},
 };
 </script>
 
 <style>
+/* Basic styling */
 * {
 	padding: 0;
 	margin: 0;
